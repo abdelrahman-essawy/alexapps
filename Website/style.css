@@ -156,14 +156,18 @@ strong {
 }
 .navBar {
   display: flex;
-  /* align-items: center; */
+  align-items: center;
   justify-content: space-between;
   padding: 0.3rem;
   max-width: 1170px;
   margin-inline: auto;
   height: 100%;
+  border: 1px solid red;
+  align-self: stretch;
 }
-
+.navBar_Wrapper.fullWidth {
+  max-width: 100%;
+}
 .navBar .navBar__callUs {
   width: 42.5px;
   height: 42.5px;
@@ -206,6 +210,9 @@ strong {
   display: flex;
   gap: 1rem;
   font-size: 14px;
+  /* align-items: center; */
+  height: 100%;
+  border: 1px solid red;
 }
 .navBar .navBar__linksSection .estimation {
   background-color: var(--primaryColor);
@@ -213,6 +220,7 @@ strong {
   border-radius: 10px;
   text-transform: capitalize;
   color: var(--light);
+  align-self: center;
 }
 .navBar .navBar__linksSection .navBar__linksSection-navLinks {
   display: flex;
@@ -223,10 +231,12 @@ strong {
   height: 100%;
 }
 .navBar .navBar__linksSection .navBar__linksSection-navLinks .link {
-  position: relative;
+  /* position: relative; */
   height: 100%;
   display: flex;
   align-items: center;
+  align-self: stretch;
+  border: 1px solid red;
 }
 .navBar .navBar__linksSection .navBar__linksSection-navLinks .link a {
   color: var(--linksColor);
@@ -241,10 +251,13 @@ strong {
 }
 /*** mainNav SubMenus ***/
 /*Company*/
-.navBar .navBar__linksSection .navBar__linksSection-navLinks .link.company ul {
+.navBar
+  .navBar__linksSection
+  .navBar__linksSection-navLinks
+  .link.company
+  .companySubMenu {
   background-color: var(--light);
   position: absolute;
-  /* top: 100%; */
   -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.15);
@@ -254,7 +267,7 @@ strong {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out , max-height 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
 }
 .navBar
   .navBar__linksSection
@@ -273,6 +286,8 @@ strong {
   padding: 1rem;
   display: flex;
   gap: 1rem;
+  cursor: pointer;
+  transition: padding-left 0.3s ease-in-out;
 }
 .navBar
   .navBar__linksSection
@@ -283,6 +298,93 @@ strong {
   .companyChevron {
   font-weight: bold;
   font-size: 14px;
+}
+.navBar
+  .navBar__linksSection
+  .navBar__linksSection-navLinks
+  .link.company
+  ul
+  li:hover {
+  padding-left: 1.5rem;
+}
+
+/* Services Sub Menu */
+.navBar
+  .navBar__linksSection
+  .navBar__linksSection-navLinks
+  .link.services
+  .servicesMenuWrapper,
+.navBar .link.solution .solutionMenuWrapper {
+  position: absolute;
+  left: 0;
+  background-color: var(--light);
+  width: 100%;
+  top: 98%;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+.navBar
+  .navBar__linksSection
+  .navBar__linksSection-navLinks
+  .link.services:hover
+  .servicesMenuWrapper,
+.navBar .link.solution:hover .solutionMenuWrapper {
+  max-height: 600px;
+  opacity: 1;
+}
+.navBar
+  .navBar__linksSection
+  .navBar__linksSection-navLinks
+  .link.services
+  .servicesMenuWrapper
+  .servicesSubMenu,
+.navBar .link.solution .solutionMenuWrapper .solutionSubMenu {
+  display: flex;
+  max-width: 1370px;
+  margin-inline: auto;
+  justify-content: space-between;
+}
+.navBar
+  .navBar__linksSection
+  .navBar__linksSection-navLinks
+  .link.services
+  .servicesMenuWrapper
+  .servicesSubMenu
+  > li,
+.navBar .link.solution .solutionMenuWrapper .solutionSubMenu > li {
+  width: 100%;
+}
+.navBar .link.services .servicesMenuWrapper .servicesSubMenu > li > a,
+.navBar .link.solution .solutionMenuWrapper .solutionSubMenu > li > a {
+  display: flex;
+  align-items: center;
+  color: #202122;
+  font-size: 18px;
+  padding: 20px 10px 20px 15px;
+  font-weight: 500;
+  border-bottom: 1px solid #202122;
+  gap: 1rem;
+}
+.navBar .link.services .servicesSubMenu .servicesSubMenuLvl2,
+.navBar .link.solution .solutionMenuWrapper .solutionSubMenuLvl2 {
+  padding: 10px 20px;
+}
+.navBar .link.services .servicesSubMenu .servicesSubMenuLvl2 > li,
+.navBar .link.solution .solutionMenuWrapper .solutionSubMenuLvl2 > li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 10px 0;
+  line-height: 1.3;
+}
+.navBar .link.services .servicesSubMenu .servicesSubMenuLvl2 > li > a,
+.navBar .link.solution .solutionMenuWrapper .solutionSubMenuLvl2 > li > a {
+  color: #202122;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
 }
 /************* NAVBAR *******************/
 body {

@@ -13,3 +13,15 @@ window.addEventListener("DOMContentLoaded", () => {
     animateHeader.style.transform = `translateY(0px)`;
   }
 });
+
+const navBarWrapper = document.getElementById("navBarWrapper");
+console.log(navBarWrapper);
+const navWidthTogglers = document.querySelectorAll(".navWidthTogglers");
+navWidthTogglers.forEach((singleToggler) => {
+  singleToggler.addEventListener("mouseover", () => {
+    navBarWrapper.classList.add("fullWidth");
+  });
+  singleToggler.addEventListener("mouseleave", () => {
+    navBarWrapper.classList.remove("fullWidth");
+  });
+});
