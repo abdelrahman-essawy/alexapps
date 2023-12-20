@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./fontawesome/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,14 +19,39 @@
         <div class="topNavWrapper">
           <div class="left topNav__leftSide">
             <div class="topNav__imgContainer">
-              <img src="./assets/Clutch.svg" alt="clutch logo" />
+              <img loading="lazy" src="./assets/Clutch.svg" alt="clutch logo" />
             </div>
             <div class="stars topNav__stars">
-              <i class="fa-solid fa-star topNav__singleStar"></i>
-              <i class="fa-solid fa-star topNav__singleStar"></i>
-              <i class="fa-solid fa-star topNav__singleStar"></i>
-              <i class="fa-solid fa-star topNav__singleStar"></i>
-              <i class="fa-regular fa-star-half-stroke topNav__singleStar"></i>
+              <img
+                loading="lazy"
+                class="topNav__singleStar"
+                src="./assets/NavbarSVGs/top_nav/star.svg"
+                alt="star icon"
+              />
+              <img
+                loading="lazy"
+                class="topNav__singleStar"
+                src="./assets/NavbarSVGs/top_nav/star.svg"
+                alt="star icon"
+              />
+              <img
+                loading="lazy"
+                class="topNav__singleStar"
+                src="./assets/NavbarSVGs/top_nav/star.svg"
+                alt="star icon"
+              />
+              <img
+                loading="lazy"
+                class="topNav__singleStar"
+                src="./assets/NavbarSVGs/top_nav/star.svg"
+                alt="star icon"
+              />
+              <img
+                loading="lazy"
+                class="topNav__singleStar"
+                src="./assets/NavbarSVGs/top_nav/half_star.svg"
+                alt="half-star icon"
+              />
             </div>
             <div class="rate topNav__rate">
               <b>Excellent</b>
@@ -44,7 +68,11 @@
               or Speak to our expert <span>+44 203 467 7471</span> or
             </p>
             <a href="#" class="avatar topNav__avatar">
-              <img src="./assets/call-us-avatar.jpg" alt="call us avatar" />
+              <img
+                loading="lazy"
+                src="./assets/call-us-avatar.jpg"
+                alt="call us avatar"
+              />
               <span>Request a Call Back</span>
             </a>
           </div>
@@ -65,6 +93,7 @@
           <!-- Brand Logo -->
           <div class="navbar__brand">
             <img
+              loading="lazy"
               class="navbar__brangImg"
               srcset="
                 ./assets/intelivita-logo-mobile.svg 1024w,
@@ -79,7 +108,13 @@
 
           <!-- Call-us  to-1024px-->
           <div class="navbar__callUs">
-            <i class="fas fa-phone-volume icon navbar__phoneIcon"></i>
+            <!-- <i class="fas fa-phone-volume icon navbar__phoneIcon"></i> -->
+            <img
+              loading="lazy"
+              class="navbar__phoneIcon"
+              src="./assets/NavbarSVGs/main_menu/phone.svg"
+              alt="phone ring icon"
+            />
             <span class="navbar__calRequest"> Request a Call Back</span>
           </div>
           <!-- Call-us -->
@@ -92,26 +127,54 @@
               </li>
 
               <li class="navbar__listItem navbar__listItem-company">
-                <a href="#" class="navbar__navLinkTag">
+                <a
+                  href="#"
+                  class="navbar__navLinkTag navbar__navLinkTag--disabledLink"
+                >
                   <span>Company</span>
-                  <i class="fa-solid fa-caret-down"></i>
+                  <img
+                    loading="lazy"
+                    class="navbar__caretImg"
+                    src="./assets/NavbarSVGs/main_menu/caret_down.svg"
+                    alt="caret down icon"
+                  />
                 </a>
 
                 <ul class="navbar__subMenu navbar__subMenu-company">
                   <li class="navbar__subLink">
-                    <i class="fa-solid fa-chevron-right navbar__subIcon"></i>
+                    <img
+                      loading="lazy"
+                      class="navbar__subIcon"
+                      src="./assets/NavbarSVGs/sub_menu_company/chevron_right.svg"
+                      alt="chevron right icon"
+                    />
                     <a href="#" class="navbar__subNavLinkTag">Who we are</a>
                   </li>
                   <li class="navbar__subLink">
-                    <i class="fa-solid fa-chevron-right navbar__subIcon"></i>
+                    <img
+                      loading="lazy"
+                      class="navbar__subIcon"
+                      src="./assets/NavbarSVGs/sub_menu_company/chevron_right.svg"
+                      alt="chevron right icon"
+                    />
                     <a href="#" class="navbar__subNavLinkTag"> How we work</a>
                   </li>
                   <li class="navbar__subLink">
-                    <i class="fa-solid fa-chevron-right navbar__subIcon"></i>
+                    <img
+                      loading="lazy"
+                      class="navbar__subIcon"
+                      src="./assets/NavbarSVGs/sub_menu_company/chevron_right.svg"
+                      alt="chevron right icon"
+                    />
                     <a href="#" class="navbar__subNavLinkTag">Client review</a>
                   </li>
                   <li class="navbar__subLink">
-                    <i class="fa-solid fa-chevron-right navbar__subIcon"></i>
+                    <img
+                      loading="lazy"
+                      class="navbar__subIcon"
+                      src="./assets/NavbarSVGs/sub_menu_company/chevron_right.svg"
+                      alt="chevron right icon"
+                    />
                     <a href="#" class="navbar__subNavLinkTag">Technologies</a>
                   </li>
                 </ul>
@@ -120,9 +183,17 @@
               <li
                 class="navWidthTogglers navbar__listItem navbar__listItem-ourServices"
               >
-                <a href="#" class="navbar__navLinkTag">
+                <a
+                  href="#"
+                  class="navbar__navLinkTag navbar__navLinkTag--disabledLink"
+                >
                   <span>Our Services</span>
-                  <i class="fa-solid fa-caret-down"></i>
+                  <img
+                    loading="lazy"
+                    class="navbar__caretImg"
+                    src="./assets/NavbarSVGs/main_menu/caret_down.svg"
+                    alt="caret down icon"
+                  />
                 </a>
 
                 <div class="navbar__serviceMenuContainer">
@@ -130,60 +201,81 @@
                     <!-- Services Column One -->
                     <li class="navbar__subMenuColumn">
                       <a href="#" class="navbar__subMenuColumnLinkTag">
-                        <i
-                          class="fa-regular fa-newspaper navbar__subMenuColumnIcon"
-                        ></i>
+                        <img
+                          loading="lazy"
+                          class="navbar__subMenuColumnIcon"
+                          src="./assets/NavbarSVGs/sub_menu_services/mobile-development-coding-code-xcode-svgrepo-com.svg"
+                          alt="mobile icon for mobile development"
+                        />
                         <span>Mobile App Development</span>
                       </a>
                       <ul
                         class="navbar__subMenuLvl2 navbar__subMenuLvl2-services"
                       >
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-brands fa-apple navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>iPhone App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/iPhone.svg"
+                              alt="apple brand logo"
+                            />
+                            <span>iPhone App Development</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-brands fa-android navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Android App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/android.svg"
+                              alt="android brand logo"
+                            />
+                            <span>Android App Development</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-regular fa-newspaper navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Flutter App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/flutter.svg"
+                              alt="flutter mobile framework logo"
+                            />
+                            <span>Flutter App Development</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-server navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Cross Platform App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/cross_platform.svg"
+                              alt="different types of devices expressing crossplatform idea"
+                            />
+                            <span>Cross Platform App Development</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-code navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>AR App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/AP_app_development.svg"
+                              alt="mobile phone with a cube for AR App Development"
+                            />
+                            <span>AR App Development</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-user-astronaut navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>VR App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/VR_app_development.svg"
+                              alt="a man wearing a VR glasses"
+                            />
+                            <span>VR App Development</span></a
                           >
                         </li>
                       </ul>
@@ -191,60 +283,81 @@
                     <!-- Services Column Two -->
                     <li class="navbar__subMenuColumn">
                       <a href="#" class="navbar__subMenuColumnLinkTag">
-                        <i
-                          class="fa-regular fa-newspaper navbar__subMenuColumnIcon"
-                        ></i>
-                        <span>Mobile App Development</span>
+                        <img
+                          loading="lazy"
+                          class="navbar__subMenuColumnIcon"
+                          src="./assets/NavbarSVGs/sub_menu_services/web_development.svg"
+                          alt="a laptop with coding brackets and code lines on the screen"
+                        />
+                        <span>Web Development</span>
                       </a>
                       <ul
                         class="navbar__subMenuLvl2 navbar__subMenuLvl2-services"
                       >
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-brands fa-apple navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>iPhone App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/php.svg"
+                              alt="PHP programming language"
+                            />
+                            <span>PHP Web Development</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-brands fa-android navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Android App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/wordpress.svg"
+                              alt="wordpress logo"
+                            />
+                            <span>Wordpress Development</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-regular fa-newspaper navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Flutter App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/codeigniter.svg"
+                              alt="codeigniter logo"
+                            />
+                            <span>Codeigniter Development</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-server navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Cross Platform App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/laravel.svg"
+                              alt="laravel logo"
+                            />
+                            <span>Laravel Development</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-code navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>AR App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/angular.svg"
+                              alt="angular logo"
+                            />
+                            <span>AngularJS Development</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-user-astronaut navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>VR App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/nodejs.svg"
+                              alt="nodejs logo"
+                            />
+                            <span>NodeJS Development</span></a
                           >
                         </li>
                       </ul>
@@ -252,60 +365,82 @@
                     <!-- Services Column Three -->
                     <li class="navbar__subMenuColumn">
                       <a href="#" class="navbar__subMenuColumnLinkTag">
-                        <i
-                          class="fa-regular fa-newspaper navbar__subMenuColumnIcon"
-                        ></i>
-                        <span>Mobile App Development</span>
+                        <img
+                          loading="lazy"
+                          class="navbar__subMenuColumnIcon"
+                          src="./assets/NavbarSVGs/sub_menu_services/game_development.svg"
+                          alt="gamepad icon"
+                        />
+                        <span>Game Development</span>
                       </a>
                       <ul
                         class="navbar__subMenuLvl2 navbar__subMenuLvl2-services"
                       >
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-brands fa-apple navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>iPhone App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/iPhone.svg"
+                              alt="apple brand logo"
+                            />
+
+                            <span>iOS Game Development</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-brands fa-android navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Android App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/android.svg"
+                              alt="android logo"
+                            />
+                            <span>Android Game Development</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-regular fa-newspaper navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Flutter App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/2d_3d_game_development.svg"
+                              alt="2d pacman icon for game development"
+                            />
+                            <span>2D/3D Game Development</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-server navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Cross Platform App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/AP_app_development.svg"
+                              alt="a mobile phone with a 3d cube for AR Game Development"
+                            />
+                            <span>AR Game Development</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-code navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>AR App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/VR_app_development.svg"
+                              alt="a man wearing a VR glasses"
+                            />
+                            <span>VR Game Development</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-user-astronaut navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>VR App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/mac_game_development.svg"
+                              alt="all in one mac pc icon"
+                            />
+                            <span>Mac Game Development</span></a
                           >
                         </li>
                       </ul>
@@ -313,60 +448,81 @@
                     <!-- Services Column Four -->
                     <li class="navbar__subMenuColumn">
                       <a href="#" class="navbar__subMenuColumnLinkTag">
-                        <i
-                          class="fa-regular fa-newspaper navbar__subMenuColumnIcon"
-                        ></i>
-                        <span>Mobile App Development</span>
+                        <img
+                          loading="lazy"
+                          class="navbar__subMenuColumnIcon"
+                          src="./assets/NavbarSVGs/sub_menu_services/enterprise_solution.svg"
+                          alt="a computer screen infront of it a poping up credit card"
+                        />
+                        <span>Enterprise Solutions</span>
                       </a>
                       <ul
                         class="navbar__subMenuLvl2 navbar__subMenuLvl2-services"
                       >
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-brands fa-apple navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>iPhone App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/startup.svg"
+                              alt="opened book and a rocket launching from the middle of the book"
+                            />
+                            <span>Startup MVP Development</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-brands fa-android navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Android App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/erp.svg"
+                              alt="a main point extracting multiple paths"
+                            />
+                            <span>ERP Solutions</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-regular fa-newspaper navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Flutter App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/crm.svg"
+                              alt="CRM logo"
+                            />
+                            <span>CRM Solutions</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-server navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Cross Platform App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/cms.svg"
+                              alt="a computer screen showing content managment system CMS"
+                            />
+                            <span>CMS Solutions</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-code navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>AR App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/ecommerce.svg"
+                              alt="a shopping cart"
+                            />
+                            <span>Ecommerce Solutions</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-user-astronaut navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>VR App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_services/ui_ux_design.svg"
+                              alt="pen tool"
+                            />
+                            <span>UI-UX Design</span></a
                           >
                         </li>
                       </ul>
@@ -379,70 +535,77 @@
               <li
                 class="navWidthTogglers navbar__listItem navbar__listItem-ourServices navbar__ListItem-solution"
               >
-                <a href="#" class="navbar__navLinkTag">
+                <a
+                  href="#"
+                  class="navbar__navLinkTag navbar__navLinkTag--disabledLink"
+                >
                   <span>Solution</span>
-                  <i class="fa-solid fa-caret-down"></i>
+                  <img
+                    loading="lazy"
+                    class="navbar__caretImg"
+                    src="./assets/NavbarSVGs/main_menu/caret_down.svg"
+                    alt="caret down icon"
+                  />
                 </a>
 
                 <div class="navbar__solutionMenuContainer">
                   <ul class="navbar__subMenu navbar__subMenu-solution">
-                    <!-- Services Column One -->
+                    <!-- Solutions Column One -->
                     <li class="navbar__subMenuColumn">
                       <a href="#" class="navbar__subMenuColumnLinkTag">
-                        <i
-                          class="fa-regular fa-newspaper navbar__subMenuColumnIcon"
-                        ></i>
+                        <img
+                          loading="lazy"
+                          class="navbar__subMenuColumnIcon"
+                          src="./assets/NavbarSVGs/sub_menu_solution/on_demand_solution.svg"
+                          alt="puzzle pieces connected together"
+                        />
                         <span>On-demand Solutions</span>
                       </a>
                       <ul
                         class="navbar__subMenuLvl2 navbar__subMenuLvl2-services"
                       >
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-brands fa-apple navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>iPhone App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_solution/taxi.svg"
+                              alt="taxi icon"
+                            />
+                            <span>Taxi Book</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-brands fa-android navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Android App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_solution/food_delivery.svg"
+                              alt="a delivery bike icon"
+                            />
+                            <span>Food Delivery</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-regular fa-newspaper navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Flutter App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_solution/car_wash.svg"
+                              alt="car wash"
+                            />
+                            <span>Car Wash</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-server navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Cross Platform App Development</span></a
-                          >
-                        </li>
-                        <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-code navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>AR App Development</span></a
-                          >
-                        </li>
-                        <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-user-astronaut navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>VR App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_solution/seo.svg"
+                              alt="Magnifier inside of it SEO word"
+                            />
+                            <span>SEO Services</span></a
                           >
                         </li>
                       </ul>
@@ -450,60 +613,59 @@
                     <!-- Services Column Two -->
                     <li class="navbar__subMenuColumn">
                       <a href="#" class="navbar__subMenuColumnLinkTag">
-                        <i
-                          class="fa-regular fa-newspaper navbar__subMenuColumnIcon"
-                        ></i>
+                        <img
+                          loading="lazy"
+                          class="navbar__subMenuColumnIcon"
+                          src="./assets/NavbarSVGs/sub_menu_solution/industry_solution.svg"
+                          alt="screen showing a man and a cog expressing industry solutions"
+                        />
                         <span>Industry Solutions</span>
                       </a>
                       <ul
                         class="navbar__subMenuLvl2 navbar__subMenuLvl2-services"
                       >
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-brands fa-apple navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>iPhone App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_solution/real_estate.svg"
+                              alt="two buildings beside each other"
+                            />
+                            <span>Real Estate</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-brands fa-android navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Android App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_solution/banking_and_finance.svg"
+                              alt="a hand on top of it a dollar symbol"
+                            />
+                            <span>Banking and Finance</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-regular fa-newspaper navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Flutter App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_solution/travel_and_tourism.svg"
+                              alt="sun and mountains"
+                            />
+                            <span>Travel and Tourism</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-server navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Cross Platform App Development</span></a
-                          >
-                        </li>
-                        <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-code navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>AR App Development</span></a
-                          >
-                        </li>
-                        <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-user-astronaut navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>VR App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_solution/health_and_fitness.svg"
+                              alt="a man walking"
+                            />
+                            <span>Health and Fitness</span></a
                           >
                         </li>
                       </ul>
@@ -511,60 +673,59 @@
                     <!-- Services Column Three -->
                     <li class="navbar__subMenuColumn">
                       <a href="#" class="navbar__subMenuColumnLinkTag">
-                        <i
-                          class="fa-regular fa-newspaper navbar__subMenuColumnIcon"
-                        ></i>
+                        <img
+                          loading="lazy"
+                          class="navbar__subMenuColumnIcon"
+                          src="./assets/NavbarSVGs/sub_menu_solution/social_solution.svg"
+                          alt="user icon with multiple connections coming out from it"
+                        />
                         <span>Social Solutions</span>
                       </a>
                       <ul
                         class="navbar__subMenuLvl2 navbar__subMenuLvl2-services"
                       >
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-brands fa-apple navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>iPhone App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_solution/social_media.svg"
+                              alt="thumbs up icon"
+                            />
+                            <span>Social Media</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-brands fa-android navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Android App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_solution/dating.svg"
+                              alt="heart icon"
+                            />
+                            <span>Dating</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-regular fa-newspaper navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Flutter App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_solution/instant_messaging.svg"
+                              alt="chatting and messages icon"
+                            />
+                            <span>Instant Messaging</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-server navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Cross Platform App Development</span></a
-                          >
-                        </li>
-                        <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-code navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>AR App Development</span></a
-                          >
-                        </li>
-                        <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-solid fa-user-astronaut navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>VR App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_solution/media_and_entertainment.svg"
+                              alt="clapper icon"
+                            />
+                            <span>Media and Entertainment</span></a
                           >
                         </li>
                       </ul>
@@ -572,28 +733,37 @@
                     <!-- Services Column Four -->
                     <li class="navbar__subMenuColumn">
                       <a href="#" class="navbar__subMenuColumnLinkTag">
-                        <i
-                          class="fa-regular fa-newspaper navbar__subMenuColumnIcon"
-                        ></i>
+                        <img
+                          loading="lazy"
+                          class="navbar__subMenuColumnIcon"
+                          src="./assets/NavbarSVGs/sub_menu_solution/other_solution.svg"
+                          alt="puzzle pieces"
+                        />
                         <span>Other Solutions</span>
                       </a>
                       <ul
                         class="navbar__subMenuLvl2 navbar__subMenuLvl2-services"
                       >
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-brands fa-apple navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>iPhone App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_solution/fantasy_sports.svg"
+                              alt="football, glove and a sport's bag"
+                            />
+                            <span>Fantasy Sport</span></a
                           >
                         </li>
                         <li class="navbar__subMenuColumnListItem">
-                          <a href="#" class="navbar__subMenuColumnNavLinkTag"
-                            ><i
-                              class="fa-brands fa-android navbar__subMenuColumnIconLvl2"
-                            ></i
-                            ><span>Android App Development</span></a
+                          <a href="#" class="navbar__subMenuColumnNavLinkTag">
+                            <img
+                              loading="lazy"
+                              class="navbar__subMenuColumnIconLvl2"
+                              src="./assets/NavbarSVGs/sub_menu_solution/chatbot.svg"
+                              alt="robot icon"
+                            />
+                            <span>Chatbot</span></a
                           >
                         </li>
                       </ul>
@@ -601,137 +771,6 @@
                   </ul>
                 </div>
               </li>
-
-              <!-- <li class="link solution navWidthTogglers navbar__navLink">
-                <a href="#" class="navbar__navLinkTag"
-                  ><span>Solution</span>
-                  <i class="fa-solid fa-caret-down"></i>
-                </a>
-
-                <div class="solutionMenuWrapper">
-                  <ul class="solutionSubMenu">
-                    <li class="subColumn">
-                      <a href="#">
-                        <i class="fa-regular fa-newspaper columnIcon"></i>
-                        <span>On-demand Solutions</span>
-                      </a>
-                      <ul class="solutionSubMenuLvl2">
-                        <li>
-                          <a href="#"
-                            ><i class="fa-regular fa-newspaper subIcon"></i
-                            ><span>Taxi Book</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="#"
-                            ><i class="fa-regular fa-newspaper subIcon"></i
-                            ><span>Food Delivery</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="#"
-                            ><i class="fa-regular fa-newspaper subIcon"></i
-                            ><span>Car Wash</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="#"
-                            ><i class="fa-regular fa-newspaper subIcon"></i
-                            ><span>SEO Services</span></a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-
-                    <li class="subColumn">
-                      <a href="#">
-                        <i class="fa-regular fa-newspaper columnIcon"></i>
-                        <span>Industry Solutions</span>
-                      </a>
-                      <ul class="solutionSubMenuLvl2">
-                        <li>
-                          <a href="#">
-                            <i class="fa-regular fa-newspaper subIcon"></i
-                            ><span>Real Estate</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="fa-regular fa-newspaper subIcon"></i>
-                            <span>Banking And Finance</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#"
-                            ><i class="fa-regular fa-newspaper subIcon"></i
-                            ><span>Travel And Tourism</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="#"
-                            ><i class="fa-regular fa-newspaper subIcon"></i
-                            ><span>Health And Fitness</span></a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-
-                    <li class="subColumn">
-                      <a href="#">
-                        <i class="fa-regular fa-newspaper columnIcon"></i>
-                        <span>Social Solutions</span>
-                      </a>
-                      <ul class="solutionSubMenuLvl2">
-                        <li>
-                          <a href="#">
-                            <i class="fa-regular fa-newspaper subIcon"></i
-                            ><span>Social Media</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="#">
-                            <i class="fa-regular fa-newspaper subIcon"></i>
-                            <span>Dating</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#"
-                            ><i class="fa-regular fa-newspaper subIcon"></i
-                            ><span>Instat Messaging</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="#"
-                            ><i class="fa-regular fa-newspaper subIcon"></i
-                            ><span>Media And Entertainment</span></a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-
-                    <li class="subColumn">
-                      <a href="#">
-                        <i class="fa-regular fa-newspaper columnIcon"></i>
-                        <span>Other Solutions</span>
-                      </a>
-                      <ul class="solutionSubMenuLvl2">
-                        <li>
-                          <a href="#"
-                            ><i class="fa-regular fa-newspaper subIcon"></i
-                            ><span>Fantasy Sport</span></a
-                          >
-                        </li>
-                        <li>
-                          <a href="#"
-                            ><i class="fa-regular fa-newspaper subIcon"></i
-                            ><span>Chatbot</span></a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </li> -->
 
               <li class="link navbar__listItem">
                 <a href="#" class="navbar__navLinkTag">Portfolio</a>
@@ -745,105 +784,14 @@
                 <a href="#" class="navbar__navLinkTag">Contact</a>
               </li>
             </ul>
-            <a href="#" class="estimation">estimate your project</a>
+            <a href="#" class="navbar__estimation">estimate your project</a>
           </div>
           <!-- Links List -->
         </nav>
       </div>
 
       <!-- Mobile Navbar -->
-      <!-- <div class="mobileNavbar">
-        <nav> -->
-      <!-- MainSlide -->
-      <!-- <div class="mainSlide">
-            <ul class="mainList">
-              <li class="link">
-                <a href="#" class="linkTag">
-                  <i class="fa-solid fa-house mainListIcon"></i>
-                  <span>Home</span>
-                </a>
-              </li>
 
-              <li class="link">
-                <a href="#" class="linkTag">
-                  <i class="fa-solid fa-house mainListIcon"></i>
-                  <span>Company</span>
-                </a>
-                <i class="fa-solid fa-chevron-right"></i>
-              </li>
-
-              <li class="link">
-                <a href="#" class="linkTag">
-                  <i class="fa-solid fa-house mainListIcon"></i>
-                  <span>Our Services</span>
-                </a>
-                <i class="fa-solid fa-chevron-right"></i>
-              </li>
-
-              <li class="link">
-                <a href="#" class="linkTag">
-                  <i class="fa-solid fa-house mainListIcon"></i>
-                  <span>Solution</span>
-                </a>
-                <i class="fa-solid fa-chevron-right"></i>
-              </li>
-
-              <li class="link">
-                <a href="#" class="linkTag">
-                  <i class="fa-solid fa-house mainListIcon"></i>
-                  <span>Portfolio</span>
-                </a>
-              </li>
-
-              <li class="link">
-                <a href="#" class="linkTag">
-                  <i class="fa-solid fa-house mainListIcon"></i>
-                  <span>Blog</span>
-                </a>
-              </li>
-
-              <li class="link">
-                <a href="#" class="linkTag">
-                  <i class="fa-solid fa-house mainListIcon"></i>
-                  <span>Contact</span>
-                </a>
-              </li>
-            </ul>
-            <a href="#" class="estimation">estimate your project</a>
-          </div> -->
-      <!-- MainSlide -->
-
-      <!-- Company Sub Slide -->
-      <!-- <div class="companySlide subSlide">
-            <ul class="companyList subList">
-              <li class="companyLink subLink">
-                <a href="#" class="companyLinkTag subLinkTag">
-                  <i class="fa-solid fa-chevron-left"></i>
-                  <span>Menu</span>
-                </a>
-              </li>
-              <li class="companyLink subLink">
-                <a href="#" class="companyLinkTag subLinkTag"class="companyLinkTag subLinkTag">Who We are</a>
-              </li>
-              <li class="companyLink subLink">
-                <a href="#" class="companyLinkTag subLinkTag"class="companyLinkTag subLinkTag">How we Work</a>
-              </li>
-              <li class="companyLink subLink">
-                <a href="#" class="companyLinkTag subLinkTag"class="companyLinkTag subLinkTag">Client Review</a>
-              </li>
-              <li class="companyLink subLink">
-                <a href="#" class="companyLinkTag subLinkTag"class="companyLinkTag subLinkTag">Technologies</a>
-              </li>
-            </ul>
-          </div> -->
-      <!-- Company Sub Slide -->
-
-      <!-- Our Service Slide -->
-
-      <!-- Our Service Slide -->
-
-      <!-- </nav>
-      </div> -->
       <!-- Mobile Navbar -->
     </header>
     <!-- -------------------------------------------------------------------------------------- -->
@@ -853,7 +801,11 @@
       <section class="hero">
         <div class="wrapper">
           <div class="hero__background">
-            <img src="./assets/home-banner.webp" alt="home page banner" />
+            <img
+              loading="lazy"
+              src="./assets/home-banner.webp"
+              alt="home page banner"
+            />
           </div>
           <div class="hero__content">
             <div class="text hero__text">
@@ -875,27 +827,39 @@
       <!-- Hero Section -->
       <div class="brands" id="heroBrands">
         <div class="imgHolder brands__imgContainer">
-          <img src="./assets/brands/Microsoft.webp" alt="Microsoft" />
+          <img
+            loading="lazy"
+            src="./assets/brands/Microsoft.webp"
+            alt="Microsoft"
+          />
         </div>
         <div class="imgHolder brands__imgContainer">
-          <img src="./assets/brands/Savvy.webp" alt="Savvy" />
-        </div>
-        <div class="imgHolder brands__imgContainer">
-          <img src="./assets/brands/Zinc-Media.webp" alt="Zinc-Media" />
+          <img loading="lazy" src="./assets/brands/Savvy.webp" alt="Savvy" />
         </div>
         <div class="imgHolder brands__imgContainer">
           <img
+            loading="lazy"
+            src="./assets/brands/Zinc-Media.webp"
+            alt="Zinc-Media"
+          />
+        </div>
+        <div class="imgHolder brands__imgContainer">
+          <img
+            loading="lazy"
             src="./assets/brands/itv-colour-picked-neg.webp"
             alt="itc-colour-picked-neg"
           />
         </div>
         <div class="imgHolder brands__imgContainer">
-          <img src="./assets/brands/Toxic-Fox.webp" alt="Toxic-Fox" />
+          <img
+            loading="lazy"
+            src="./assets/brands/Toxic-Fox.webp"
+            alt="Toxic-Fox"
+          />
         </div>
       </div>
     </main>
 
-    <script src="./fontawesome/all.min.js" type="text/javascript"></script>
     <script src="././src/js/script.js" type="text/javascript"></script>
   </body>
 </html>
