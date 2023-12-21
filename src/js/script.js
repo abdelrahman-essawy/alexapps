@@ -16,7 +16,9 @@ window.addEventListener("DOMContentLoaded", () => {
 
 const navBarWrapper = document.getElementById("navBarWrapper");
 console.log(navBarWrapper);
-const navWidthTogglers = document.querySelectorAll(".navWidthTogglers");
+const navWidthTogglers = document.querySelectorAll(
+  ".navbar__listItem-widthToggler"
+);
 navWidthTogglers.forEach((singleToggler) => {
   singleToggler.addEventListener("mouseover", () => {
     navBarWrapper.classList.add("fullWidth");
