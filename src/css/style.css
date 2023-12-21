@@ -40,6 +40,7 @@ strong {
   --darkButton: var(--lightDark);
   --orangeButton: var(--primaryColor);
   --linksColor: #333;
+  --fadedLight: rgba(255, 255, 255, 0.5);
 }
 /* -------  Colors ------- */
 
@@ -62,6 +63,8 @@ strong {
   justify-content: center;
   align-items: center;
   gap: 3px;
+  cursor: pointer;
+  user-select: none;
 }
 .navbar__singleBar {
   height: 3px;
@@ -70,14 +73,14 @@ strong {
   background-color: var(--secondaryColor);
   transition: all 0.3s ease-in-out;
 }
-.navbar__bars:hover .navbar__singleBar:nth-of-type(1) {
+.navbar__bars.activeMenu .navbar__singleBar:nth-of-type(1) {
   transform-origin: top left;
   transform: translate(5px, 0px) rotate(45deg);
 }
-.navbar__bars:hover .navbar__singleBar:nth-of-type(2) {
+.navbar__bars.activeMenu .navbar__singleBar:nth-of-type(2) {
   opacity: 0;
 }
-.navbar__bars:hover .navbar__singleBar:nth-of-type(3) {
+.navbar__bars.activeMenu .navbar__singleBar:nth-of-type(3) {
   transform-origin: bottom left;
   transform: translate(5px, 4px) rotate(-45deg);
 }
@@ -165,16 +168,18 @@ strong {
 }
 .navbar {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
   padding-inline: 0.3rem;
   max-width: 1170px;
   margin-inline: auto;
   height: 100%;
-  /* border: 1px solid red; */
   padding-block: 0.5rem;
 }
-@media (min-width: ) {
+@media (min-width: 1025px) {
+  .navbar {
+    padding-bottom: 0;
+  }
 }
 .navbarWrapper.fullWidth {
   max-width: 100%;
@@ -333,13 +338,15 @@ strong {
   width: 100%;
   top: 98%;
   max-height: 0;
-  /* overflow: hidden; */
+  overflow: hidden;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out,
+    padding 0.3s ease-in-out;
 }
 .navbar__listItem-ourServices:hover .navbar__serviceMenuContainer,
 .navbar__ListItem-solution:hover .navbar__solutionMenuContainer {
-  max-height: 600px;
+  max-height: 2000px;
+  padding-bottom: 5rem;
   opacity: 1;
 }
 .navbar__subMenu-services,
@@ -412,7 +419,7 @@ strong {
 .navbar__subMenuRequest {
   background-color: var(--secondaryColor);
   position: absolute;
-  top: 100%;
+  bottom: 0%;
   width: 100%;
   color: var(--light);
   padding: 15px;
@@ -489,12 +496,97 @@ strong {
 /************* NAVBAR *******************/
 
 /******** MOBILE NAVBAR MENUS *******/
+.mobileNav {
+  background-color: var(--secondaryColor);
+  width: 260px;
+  position: fixed;
+  top: 68px;
+  isolation: isolate;
+  z-index: 999;
+  min-height: 100%;
+  font-size: 14px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+}
+@media (min-width: 1025px) {
+  .mobileNav {
+    display: none;
+  }
+}
+.mobileNav__slide {
+}
+.mobileNav__menuListItem {
+  border-bottom: 2px solid var(--fadedLight);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobileNav__menuNavLinkTag {
+  color: var(--light);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+}
+.mobileNav__menuNavLinkTag span {
+  white-space: nowrap;
+  width: 95%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.mobileNav__Icon,
+.mobileNav__chevronRight {
+  width: 20px;
+  height: 20px;
+  filter: invert(86%) sepia(100%) saturate(0%) hue-rotate(294deg)
+    brightness(106%) contrast(102%);
+}
+.mobileNav__chevronRight {
+  margin-left: auto;
+}
+.mobileNav__estimation {
+  color: var(--light);
+  font-weight: 700;
+  text-transform: capitalize;
+  width: 90%;
+  margin-inline: auto;
+  background-color: var(--primaryColor);
+  padding: 0.6rem 1rem;
+  display: block;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 17px;
+  margin-top: 1rem;
+}
 
+.mobileNav__slide {
+  position: absolute;
+  inset: 0;
+  background-color: var(--secondaryColor);
+  transition: transform 0.3s ease-in-out;
+}
+.mobileNav__companySlide,
+.mobileNav__serviceSlide,
+.mobileNav__solutionSlide {
+  transform: translateX(100%);
+  /* display: none; */
+}
+.mobileNav__serviceSubSlide,
+.mobileNav__solutionSubSlide {
+  transform: translateX(100%);
+}
+.slideIn {
+  transform: translateX(0%);
+}
 /******** MOBILE NAVBAR MENUS *******/
 
 body {
   height: 5000px;
 }
+
 /***************** HERO SECTION ***************/
 .hero {
   background: linear-gradient(

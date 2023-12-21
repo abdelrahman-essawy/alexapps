@@ -1,5 +1,5 @@
 const animateHeader = document.getElementById("mainHeader");
-window.addEventListener("scroll", (e) => {
+window.addEventListener("scroll", () => {
   if (window.scrollY > 0 && window.innerWidth >= 1025) {
     animateHeader.style.transform = `translateY(-59px)`;
   } else {
@@ -15,7 +15,6 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 const navBarWrapper = document.getElementById("navBarWrapper");
-console.log(navBarWrapper);
 const navWidthTogglers = document.querySelectorAll(
   ".navbar__listItem-widthToggler"
 );
@@ -29,11 +28,55 @@ navWidthTogglers.forEach((singleToggler) => {
 });
 
 // Disabled links
-const disabledLinks = document.querySelectorAll(
-  ".navbar__navLinkTag--disabledLink"
-);
+const disabledLinks = document.querySelectorAll(".disabledLink");
 disabledLinks.forEach((eachDisabledLink) => {
   eachDisabledLink.addEventListener("click", (e) => {
     e.preventDefault();
   });
+});
+
+/*** Pull Mobile menus in and out; ***/
+// BurgerMenu to pull main menu
+const burgerMenu = document.querySelector(".navbar__bars");
+const mobileMenu = document.querySelector(".mobileNav");
+const triggers = document.querySelectorAll("[data-type=mobileSubMenuSlide]");
+const pullOut = document.querySelectorAll("[data-type=slideOut]");
+
+burgerMenu.addEventListener("click", () => {
+  if (burgerMenu.classList.contains("activeMenu")) {
+    setTimeout(() => {
+      burgerMenu.classList.remove("activeMenu");
+      pullOut.forEach((e) => {
+        const slide = document.getElementById(e.dataset.slideid);
+        slide.classList.remove("slideIn");
+      });
+    }, 200);
+    mobileMenu.classList.remove("slideIn");
+  } else {
+    setTimeout(() => {
+      burgerMenu.classList.add("activeMenu");
+    }, 200);
+    mobileMenu.classList.add("slideIn");
+  }
+});
+
+// 1- Company Menu
+triggers.forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    const slide = document.getElementById(trigger.dataset.slideid);
+    slide.classList.add("slideIn");
+  });
+});
+
+pullOut.forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    const slide = document.getElementById(trigger.dataset.slideid);
+    slide.classList.remove("slideIn");
+  });
+});
+
+// ----------------------
+window.addEventListener("resize", () => {
+  burgerMenu.classList.remove("activeMenu");
+  mobileMenu.classList.remove("slideIn");
 });
