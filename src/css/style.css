@@ -1219,7 +1219,7 @@ body {
   text-align: center;
 }
 .services__cards {
-  padding-block: 2rem;
+  padding-top: 2rem;
   display: grid;
   align-items: center;
   justify-content: space-between;
@@ -1228,50 +1228,58 @@ body {
   max-width: 1170px;
   margin-inline: auto;
 }
-.services__card {
+.defCard {
   border-radius: 10px;
   border: 1px solid #eff0f0;
-  padding: 1rem;
+  gap: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  padding: 1rem;
   transition: box-shadow 0.3s ease-in-out;
+}
+.services__card {
+  padding: 1rem;
   width: 100%;
 }
 .services__card:hover {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
-.services__cardHeader {
-  background-color: #f7f7f7;
+.defCardHeader {
   width: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  padding: 1rem;
   transition: background-color 0.3s ease-in-out;
 }
-.services__cardImg {
-  filter: var(--primaryFilter);
+.services__cardHeader {
+  border-radius: 50%;
+  background-color: #f7f7f7;
+  padding: 1rem;
+}
+.defCardImg {
   width: 50px;
   height: 50px;
   transition: background-color 0.3s ease-in-out;
 }
-.services__card:hover .services__cardHeader {
+.services__cardImg {
+  filter: var(--primaryFilter);
+}
+.defCard:hover .defCardHeader {
   background-color: var(--primaryColor);
 }
-.services__card:hover .services__cardImg {
+.defCard:hover .defCardImg {
   filter: var(--whiteFilter);
 }
-.services__cardTitle {
+.defCardTitle {
   font-size: 18px;
   margin: 0 0 10px;
   font-weight: 500;
   line-height: 1.2;
 }
-.services__cardDesc {
+.defCardDesc {
   line-height: 1.5;
   color: var(--lightGray);
+  font-size: 13px;
 }
 .services__cardFoot {
   padding: 0.5rem 0;
@@ -1293,3 +1301,114 @@ body {
   color: var(--light);
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
+/* SERVICES SECTION END */
+
+/* VALUES SECTION */
+.values {
+  padding-block: 5rem;
+  padding-inline: 1rem;
+  background-color: var(--lighterGray);
+  position: relative;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.values__cards {
+  width: 100%;
+  max-width: 1170px;
+  margin-top: 2rem;
+}
+.swiper-wrapper {
+  box-sizing: border-box;
+}
+.swiper-pagination {
+  margin-top: 1rem;
+  position: unset;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  background-color: var(--primaryColor);
+}
+.values__card {
+  align-items: center;
+  text-align: center;
+  padding-block: 1rem;
+  min-height: 250px;
+  background-color: var(--light);
+}
+.values__cardHeader {
+  background: #fff;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  padding: 10px;
+}
+.values__cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+.defCardHeader,
+.defCardBody {
+  pointer-events: none;
+  user-select: none;
+}
+.values__getInTouch {
+  width: 100%;
+  max-width: 1170px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: var(--light);
+  padding: 25px;
+  border: 1px solid #ecedee;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 991px) {
+  .values__getInTouch {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.values__getInTouch p {
+  font-size: 18px;
+  color: var(--secondaryColor);
+  font-weight: 600;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .values__getInTouch p {
+    font-size: 24px;
+  }
+}
+.typeMachine {
+  color: var(--primaryColor);
+  margin-inline: 0.25rem;
+}
+.values__getInTouch a {
+  background-color: var(--primaryColor);
+  color: var(--light);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+}
+.blinkingCursor {
+  margin-right: 0.25rem;
+  animation: blink 500ms linear 0s infinite alternate both;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* VALUES SECTION  END*/
