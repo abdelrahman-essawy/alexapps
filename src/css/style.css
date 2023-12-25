@@ -49,7 +49,7 @@ strong {
 p {
   font-size: 14px;
   line-height: 1.5;
-  color: var(--lightGray)
+  color: var(--lightGray);
 }
 
 /* Wrapper */
@@ -649,6 +649,7 @@ p {
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 22px;
+  color: var(--light);
 }
 .hero__navigation {
   display: flex;
@@ -1090,9 +1091,6 @@ p {
 }
 .offerings__card-activeCard {
   display: grid;
-}
-.show {
-  opacity: 1;
 }
 .offerings__cardImgHolder {
   margin-bottom: 40px;
@@ -1932,9 +1930,8 @@ p {
 .contact__imgHolder {
   max-width: 250px;
   width: 100%;
-  box-shadow: 0 0 0 1px var(--mediumGray),
-              0 0 0 15px var(--lighterGray),
-              0 0 0 17px var(--primaryColor);
+  box-shadow: 0 0 0 1px var(--mediumGray), 0 0 0 15px var(--lighterGray),
+    0 0 0 17px var(--primaryColor);
   border-radius: 50%;
   overflow: hidden;
 }
@@ -1948,8 +1945,8 @@ p {
   }
 }
 .contact__title {
- font-size: 24px;
- margin-bottom: 20px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 @media (min-width: 992px) {
   .contact__title {
@@ -1984,10 +1981,14 @@ p {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  transition: background-color 0.3s ease;
 }
 .contact__callImg img {
   filter: var(--whiteFilter);
   transform: rotate(-45deg);
+}
+.contact__callImg:hover {
+  background-color: var(--secondaryColor);
 }
 .contact__or {
   color: var(--primaryColor);
@@ -2015,7 +2016,97 @@ p {
     order: 1;
   }
 }
-@media (min-width: 992px) {
-  
-}
 /* CONTACT US END*/
+
+/* TECHNOLOGIES */
+.tech {
+  padding-block: 5rem;
+  padding-inline: 1rem;
+}
+.tech__heading {
+  text-align: center;
+}
+.tech__options {
+  margin-block: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tech__option {
+  margin: 5px;
+}
+.tech__option button {
+  padding: 1px 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: var(--lightGray);
+  font-weight: 500;
+  font-size: 13px;
+}
+@media (min-width: 1024px) {
+  .tech__option button {
+    padding-inline: 30px;
+    font-size: 14px;
+  }
+}
+.tech__option button:hover {
+  color: var(--primaryColor);
+}
+.tech__option-active button {
+  color: var(--primaryColor);
+}
+.tech__option:not(:nth-of-type(6)) {
+  border-right: 1px solid var(--mediumGray);
+}
+.tech__toolContainer {
+  display: grid;
+}
+@media (max-width: 497px) {
+  .tech__toolContainer {
+    min-height: 270px;
+  }
+}
+@media (max-width: 768px) {
+  .tech__toolContainer {
+    min-height: 180px;
+  }
+}
+.tech__tools {
+  display: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1;
+  grid-row: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.tech__tools-active {
+  display: flex;
+}
+.tech__tool {
+  width: 80px;
+  min-width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid rgba(221, 223, 225, 0.5);
+  border-radius: 10px;
+  margin: 5px;
+  transition: all 0.5s ease;
+}
+.tech__tool:hover {
+  box-shadow: 0 3px 10px rgba(0,0,0,.15);
+}
+/* TECHNOLOGIES END*/
+
+
+/* --- */
+.show {
+  opacity: 1;
+}
+/* --- */

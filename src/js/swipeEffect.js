@@ -49,10 +49,8 @@ const imgsButtons = document.querySelectorAll(".testi__img");
 const testiPagination = document.querySelectorAll(
   ".testi__swiper-pagination .swiper-pagination-bullet"
 );
-console.log(testiPagination);
 imgsButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
-    console.log(btn.dataset.quoteindex);
     const clickedImgIndex = btn.dataset.quoteindex - 1;
     testiPagination[clickedImgIndex].click();
   });
@@ -62,10 +60,10 @@ var portfolio = new Swiper(".portf__apps", {
   slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
-  // autoplay: {
-  //   delay: 2500,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,

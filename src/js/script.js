@@ -129,7 +129,7 @@ function typeWriter() {
     } else {
       // deleting done. Set next word, and repeat with typing by
       // setting reverse to false
-      wordIdx = (wordIdx+1) % 2;
+      wordIdx = (wordIdx + 1) % 2;
       reverse = false;
       setTimeout(typeWriter, 1000);
     }
@@ -145,9 +145,9 @@ function typeWriter() {
     } else {
       // Write text like a typewriter
       if (i < (textBase + words[wordIdx]).length) {
-        document.getElementById("text").innerHTML = document.getElementById("text").innerHTML + (
-          textBase + words[wordIdx]
-        ).charAt(i);
+        document.getElementById("text").innerHTML =
+          document.getElementById("text").innerHTML +
+          (textBase + words[wordIdx]).charAt(i);
         i++;
         setTimeout(typeWriter, textJitter);
       }
@@ -156,3 +156,31 @@ function typeWriter() {
 }
 
 typeWriter();
+
+
+
+const techOptions = document.querySelector(".tech__options");
+
+techOptions.addEventListener("click", (e) => {
+  if (e.target.tagName !== "BUTTON") return;
+  const currentActiveOption = techOptions.querySelector(
+    ".tech__option-active"
+  );
+  currentActiveOption.classList.remove("tech__option-active");
+  e.target.parentElement.classList.add("tech__option-active");
+
+  const currentActiveList = document.querySelector(
+    ".tech__tools-active"
+  );
+
+  const refClickedList = e.target.dataset.techlistid;
+
+  const requiredList = document.getElementById(refClickedList);
+
+  currentActiveList?.classList.remove("tech__tools-active");
+  requiredList.classList.add("tech__tools-active");
+  setTimeout(() => {
+    currentActiveList?.classList.remove("show");
+    requiredList.classList.add("show");
+  }, 100);
+});
