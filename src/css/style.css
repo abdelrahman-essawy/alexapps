@@ -149,6 +149,7 @@ p {
   border-radius: 50%;
 }
 .topNav__avatar span,
+.topNav__info,
 .topNav__info a {
   color: var(--light);
 }
@@ -2100,10 +2101,102 @@ p {
   transition: all 0.5s ease;
 }
 .tech__tool:hover {
-  box-shadow: 0 3px 10px rgba(0,0,0,.15);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 /* TECHNOLOGIES END*/
 
+/* FRESH SECTION */
+.fresh {
+  padding-block: 5rem;
+  padding-inline: 1rem;
+  background-color: var(--lighterGray);
+}
+.fresh__heading {
+  text-align: center;
+}
+.fresh__cards {
+  max-width: 1170px;
+  margin-inline: auto;
+}
+@media (max-width: 1023px) {
+  .fresh__cards {
+    max-width: 780px;
+  }
+}
+@media (max-width: 768px) {
+  .fresh__cards {
+    max-width: 390px;
+  }
+}
+.fresh__card {
+  border-radius: 5px;
+  overflow: hidden;
+  /* max-width: 390px; */
+  width: 100%;
+  margin: 0 auto 10px;
+  background-color: var(--light);
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+.fresh__cardBody {
+  padding: 1rem;
+}
+.fresh__title {
+  color: var(--secondaryColor);
+  transition: color 0.3s ease;
+}
+.fresh__title:hover {
+  color: var(--primaryColor);
+}
+.fresh__title h3 {
+  margin-bottom: 1rem;
+}
+.fresh__desc {
+  line-height: 2;
+  margin-bottom: 1rem;
+}
+.fresh__cardFooter {
+  padding: 1rem;
+  border-top: 1px solid var(--mediumGray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+.fresh__cardFooter div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.fresh__authorImg {
+  border-radius: 50%;
+}
+.fresh__authorName {
+  font-size: 12px;
+  color: var(--primaryColor);
+  position: relative;
+  overflow: hidden;
+}
+.fresh__authorName::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: var(--primaryColor);
+  bottom: 0;
+  left: 0;
+  transition: left 0.3s ease;
+}
+.fresh__cardFooter a:hover::before {
+  left: 100%;
+}
+.fresh__arrow {
+  transition: transform 0.3s ease;
+}
+.fresh__arrow:hover {
+  transform: translateX(10px);
+}
+/* FRESH SECTION END*/
 
 /* --- */
 .show {
