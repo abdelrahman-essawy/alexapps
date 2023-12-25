@@ -1,3 +1,22 @@
+/* -------  Colors ------- */
+:root {
+  --primaryColor: #ec7323;
+  --secondaryColor: #202122;
+  --light: #fff;
+  --lightDark: #343535;
+  --darkButton: var(--lightDark);
+  --orangeButton: var(--primaryColor);
+  --linksColor: #333;
+  --fadedLight: rgba(255, 255, 255, 0.5);
+  --lightGray: #6a6d6f;
+  --mediumGray: #dddfe1;
+  --lighterGray: #f8f9fa;
+  --primaryFilter: invert(63%) sepia(50%) saturate(4306%) hue-rotate(345deg)
+    brightness(94%) contrast(96%);
+  --whiteFilter: invert(100%) sepia(100%) saturate(0%) hue-rotate(134deg)
+    brightness(103%) contrast(101%);
+}
+/* -------  Colors ------- */
 /* Reset */
 html {
   box-sizing: border-box;
@@ -29,26 +48,9 @@ strong {
 }
 p {
   font-size: 14px;
+  line-height: 1.5;
+  color: var(--lightGray)
 }
-/* -------  Colors ------- */
-:root {
-  --primaryColor: #ec7323;
-  --secondaryColor: #202122;
-  --light: #fff;
-  --lightDark: #343535;
-  --darkButton: var(--lightDark);
-  --orangeButton: var(--primaryColor);
-  --linksColor: #333;
-  --fadedLight: rgba(255, 255, 255, 0.5);
-  --lightGray: #6a6d6f;
-  --mediumGray: #dddfe1;
-  --lighterGray: #f8f9fa;
-  --primaryFilter: invert(63%) sepia(50%) saturate(4306%) hue-rotate(345deg)
-    brightness(94%) contrast(96%);
-  --whiteFilter: invert(100%) sepia(100%) saturate(0%) hue-rotate(134deg)
-    brightness(103%) contrast(101%);
-}
-/* -------  Colors ------- */
 
 /* Wrapper */
 .wrapper {
@@ -1912,3 +1914,108 @@ p {
 }
 
 /* OUR WORK TOOK US END*/
+
+/* CONTACT US */
+.contact {
+  padding-block: 5rem;
+  padding-inline: 1rem;
+  background-color: var(--lighterGray);
+}
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1170px;
+  margin-inline: auto;
+}
+.contact__imgHolder {
+  max-width: 250px;
+  width: 100%;
+  box-shadow: 0 0 0 1px var(--mediumGray),
+              0 0 0 15px var(--lighterGray),
+              0 0 0 17px var(--primaryColor);
+  border-radius: 50%;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .contact__imgHolder {
+    max-width: 300px;
+  }
+  .contact__imgHolder img {
+    width: 300px;
+    height: 300px;
+  }
+}
+.contact__title {
+ font-size: 24px;
+ margin-bottom: 20px;
+}
+@media (min-width: 992px) {
+  .contact__title {
+    font-size: 28px;
+  }
+  .contact__container {
+    flex-direction: row;
+  }
+  .contact__img {
+    order: 1;
+    width: 50%;
+  }
+}
+.contact__callMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 1rem;
+}
+.contact__phone {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+}
+.contact__callImg {
+  background-color: var(--primaryColor);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.contact__callImg img {
+  filter: var(--whiteFilter);
+  transform: rotate(-45deg);
+}
+.contact__or {
+  color: var(--primaryColor);
+  font-weight: 600;
+}
+.contact__meeting {
+  background-color: var(--primaryColor);
+  color: var(--light);
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+.contact__meeting:hover {
+  background-color: var(--secondaryColor);
+}
+@media (min-width: 768px) {
+  .contact__callMe {
+    flex-direction: row;
+  }
+  .contact__phone {
+    order: 2;
+  }
+  .contact__or {
+    order: 1;
+  }
+}
+@media (min-width: 992px) {
+  
+}
+/* CONTACT US END*/
