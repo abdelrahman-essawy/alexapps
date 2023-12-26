@@ -157,21 +157,15 @@ function typeWriter() {
 
 typeWriter();
 
-
-
 const techOptions = document.querySelector(".tech__options");
 
 techOptions.addEventListener("click", (e) => {
   if (e.target.tagName !== "BUTTON") return;
-  const currentActiveOption = techOptions.querySelector(
-    ".tech__option-active"
-  );
+  const currentActiveOption = techOptions.querySelector(".tech__option-active");
   currentActiveOption.classList.remove("tech__option-active");
   e.target.parentElement.classList.add("tech__option-active");
 
-  const currentActiveList = document.querySelector(
-    ".tech__tools-active"
-  );
+  const currentActiveList = document.querySelector(".tech__tools-active");
 
   const refClickedList = e.target.dataset.techlistid;
 

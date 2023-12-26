@@ -13,12 +13,15 @@ const values_swiper = new Swiper(".valuesSwiper", {
   breakpoints: {
     600: {
       slidesPerView: 2,
+      loop: true,
     },
     767: {
       slidesPerView: 3,
+      loop: true,
     },
     1200: {
       slidesPerView: 4,
+      loop: false,
     },
   },
 });
@@ -30,7 +33,6 @@ const process_swiper = new Swiper(".process__swiper", {
     el: ".process__pagination",
     clickable: true,
   },
-  loop: true,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
@@ -90,11 +92,9 @@ var portfolio = new Swiper(".portf__apps", {
   },
 });
 
-
 const fresh = new Swiper(".fresh__cards", {
   slidesPerView: 1,
   spaceBetween: 30,
-  loop: true,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
@@ -102,9 +102,11 @@ const fresh = new Swiper(".fresh__cards", {
   breakpoints: {
     768: {
       slidesPerView: 2,
+      loop: true,
     },
     1024: {
       slidesPerView: 3,
+      loop: false,
     },
   },
   pagination: {
