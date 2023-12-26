@@ -2275,6 +2275,7 @@ p {
 .sch__formInp {
   padding: 1rem;
   outline: none;
+  width: 100%;
   border: 1px solid var(--mediumGray);
   color: var(--lightGray);
   font-size: 14px;
@@ -2322,10 +2323,10 @@ textarea.sch__formInp {
   .sch__form {
     grid-template-columns: repeat(2, 1fr);
   }
-  .sch__formInp[type="number"] {
+  .sch__contactLabel {
     grid-column: span 2;
   }
-  textarea.sch__formInp {
+  .sch__textareaLabel {
     grid-column: span 2;
   }
   .sch__submit {
@@ -2333,7 +2334,7 @@ textarea.sch__formInp {
   }
 }
 @media (min-width: 768px) {
-  .sch__formInp[type="number"] {
+  .sch__contactLabel {
     grid-column: span 1;
   }
   .sch__submit {
