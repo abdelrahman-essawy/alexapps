@@ -78,7 +78,6 @@ p {
 }
 .sectionsTitle {
   padding-bottom: 1rem;
-  text-align: center;
 }
 .sectionSubTitle {
   font-weight: 500;
@@ -94,6 +93,8 @@ p {
   color: var(--lightGray);
   max-width: 880px;
   margin-inline: auto;
+}
+.headingCenter {
   text-align: center;
 }
 /* ========================== */
@@ -1163,9 +1164,6 @@ p {
   padding-inline: 1rem;
   background-color: var(--light);
 }
-.services__heading {
-  text-align: center;
-}
 .services__cards {
   padding-top: 2rem;
   display: -ms-grid;
@@ -1419,9 +1417,6 @@ p {
   padding-inline: 1rem;
   background-color: var(--light);
 }
-.process__heading {
-  text-align: center;
-}
 .process__swiper {
   margin-top: 3rem;
 }
@@ -1578,9 +1573,6 @@ p {
   padding-block: 5rem;
   padding-inline: 1rem;
   background-color: var(--lighterGray);
-}
-.testi__heading {
-  text-align: center;
 }
 
 .testi__swiper .testi__slide {
@@ -1750,9 +1742,6 @@ p {
   padding-inline: 1rem;
   background-color: var(--light);
 }
-.portf__heading {
-  text-align: center;
-}
 .portf__apps {
   margin-top: 3rem;
 }
@@ -1879,9 +1868,6 @@ p {
   background-color: var(--lighterGray);
   padding-inline: 1rem;
 }
-.whoTalk__heading {
-  text-align: center;
-}
 .whoTalk__brands {
   margin-top: 3rem;
   display: -ms-grid;
@@ -1930,9 +1916,6 @@ p {
   padding-block: 5rem;
   padding-inline: 1rem;
   background-color: var(--light);
-}
-.ourWork__heading {
-  text-align: center;
 }
 .ourWork__brands {
   margin-top: 3rem;
@@ -2069,9 +2052,6 @@ p {
   padding-inline: 1rem;
   background-color: var(--light);
 }
-.tech__heading {
-  text-align: center;
-}
 .tech__options {
   margin-block: 2rem;
   display: -webkit-box;
@@ -2168,9 +2148,6 @@ p {
   padding-block: 5rem;
   padding-inline: 1rem;
   background-color: var(--lighterGray);
-}
-.fresh__heading {
-  text-align: center;
 }
 .fresh__card {
   border-radius: 5px;
@@ -2269,9 +2246,6 @@ p {
 .sch {
   padding: 5rem 1rem;
   background-color: var(--light);
-}
-.sch__heading {
-  text-align: center;
 }
 .sch__singleReview {
   text-align: center;
@@ -2439,7 +2413,6 @@ textarea.sch__formInp {
   background-color: var(--lighterGray);
 }
 .engage__heading {
-  text-align: center;
   width: 100%;
   max-width: 900px;
   margin-inline: auto;
@@ -2509,9 +2482,6 @@ textarea.sch__formInp {
 .loc {
   padding: 5rem 1rem 2rem;
   background-color: var(--light);
-}
-.loc__heading {
-  text-align: center;
 }
 .loc__cards {
   display: -webkit-box;
