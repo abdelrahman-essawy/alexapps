@@ -6,6 +6,10 @@ const values_swiper = new Swiper(".valuesSwiper", {
     el: ".valuesPagination",
     clickable: true,
   },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   breakpoints: {
     600: {
       slidesPerView: 2,
@@ -26,6 +30,11 @@ const process_swiper = new Swiper(".process__swiper", {
     el: ".process__pagination",
     clickable: true,
   },
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   breakpoints: {
     600: {
       slidesPerView: 2,
@@ -34,11 +43,11 @@ const process_swiper = new Swiper(".process__swiper", {
 });
 
 const testimonials = new Swiper(".testi__swiper", {
+  loop: true,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
   },
-  loop: true,
   pagination: {
     el: ".testi__swiper-pagination",
     clickable: true,
