@@ -41,6 +41,10 @@ p {
   --fadedLight: rgba(255, 255, 255, 0.5);
   --lightGray: #6a6d6f;
   --lighterGray: #f8f9fa;
+  --primaryFilter: invert(63%) sepia(50%) saturate(4306%) hue-rotate(345deg)
+    brightness(94%) contrast(96%);
+  --whiteFilter: invert(100%) sepia(100%) saturate(0%) hue-rotate(134deg)
+    brightness(103%) contrast(101%);
 }
 /* -------  Colors ------- */
 
@@ -129,8 +133,7 @@ p {
 .topNav__singleStar {
   width: 22px;
   height: 22px;
-  filter: invert(63%) sepia(50%) saturate(4306%) hue-rotate(345deg)
-    brightness(94%) contrast(96%);
+  filter: var(--primaryFilter);
 }
 .topNav__avatar {
   background-color: var(--lightDark);
@@ -176,6 +179,11 @@ p {
   height: 100%;
   padding-block: 0.5rem;
 }
+@media (min-width: 992px) {
+  .navbar__brangImg {
+    width: 230px;
+  }
+}
 @media (min-width: 1025px) {
   .navbar {
     padding-bottom: 0;
@@ -198,8 +206,7 @@ p {
 .navbar__phoneIcon {
   width: 20px;
   height: 20px;
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(158deg)
-    brightness(105%) contrast(103%);
+  filter: var(--whiteFilter);
 }
 .navbar__calRequest {
   display: none;
@@ -265,27 +272,24 @@ p {
 .navbar__subLink:hover > * {
   color: var(--primaryColor);
 }
-.navbar__navLinkTag:hover,
-.navbar__navLinkTag:hover .navbar__caretImg {
+.navbar__navLinkTag:hover {
   color: var(--primaryColor);
-  filter: invert(48%) sepia(50%) saturate(1247%) hue-rotate(349deg)
-    brightness(99%) contrast(88%);
 }
-
+.navbar__navLinkTag:hover .navbar__caretImg {
+  filter: var(--primaryFilter);
+}
 .navbar__subMenuColumn:hover .navbar__subMenuColumnLinkTag {
   background-color: var(--primaryColor);
   color: var(--light);
 }
 .navbar__subMenuColumn:hover .navbar__subMenuColumnIcon {
-  filter: invert(100%) sepia(1%) saturate(7500%) hue-rotate(268deg)
-    brightness(103%) contrast(100%);
+  filter: var(--whiteFilter);
 }
 .navbar__subMenuColumnNavLinkTag:hover {
   color: var(--primaryColor);
 }
 .navbar__subMenuColumnNavLinkTag:hover .navbar__subMenuColumnIconLvl2 {
-  filter: invert(47%) sepia(45%) saturate(1711%) hue-rotate(351deg)
-    brightness(100%) contrast(86%);
+  filter: var(--primaryFilter);
 }
 @media (max-width: 1024px) {
   .navbar__menuContainer {
@@ -326,8 +330,7 @@ p {
   padding-left: 1.5rem;
 }
 .navbar__subMenu-company .navbar__subLink:hover .navbar__subIcon {
-  filter: invert(48%) sepia(50%) saturate(1247%) hue-rotate(349deg)
-    brightness(99%) contrast(88%);
+  filter: var(--primaryFilter);
 }
 
 /* Services Sub Menu */
@@ -542,8 +545,7 @@ p {
 .mobileNav__chevronRight {
   width: 20px;
   height: 20px;
-  filter: invert(86%) sepia(100%) saturate(0%) hue-rotate(294deg)
-    brightness(106%) contrast(102%);
+  filter: var(--whiteFilter);
 }
 .mobileNav__chevronRight {
   margin-left: auto;
@@ -947,8 +949,7 @@ body {
   width: 50px;
   height: 50px;
   margin-inline: auto;
-  filter: invert(72%) sepia(57%) saturate(5924%) hue-rotate(347deg)
-    brightness(97%) contrast(91%);
+  filter: var(--primaryFilter);
 }
 @media (min-width: 375px) {
   .aboutUs__statsList {
@@ -1066,15 +1067,13 @@ body {
   color: var(--primaryColor);
 }
 .offerings__optionsListItem:hover .offerings__optionsImg {
-  filter: invert(63%) sepia(30%) saturate(5519%) hue-rotate(344deg)
-    brightness(94%) contrast(98%);
+  filter: var(--primaryFilter);
 }
 .offerings__options-activeButton {
   color: var(--primaryColor);
 }
 .offerings__options-activeButton .offerings__optionsImg {
-  filter: invert(63%) sepia(30%) saturate(5519%) hue-rotate(344deg)
-    brightness(94%) contrast(98%);
+  filter: var(--primaryFilter);
 }
 .offerings__cardsContainer {
   display: grid;
@@ -1176,8 +1175,7 @@ body {
   background-color: var(--primaryColor);
 }
 .offerings__cardIcon:hover .offerings__cardIconImg {
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
-    brightness(102%) contrast(102%);
+  filter: var(--whiteFilter);
 }
 .offerings__DevelopmentCost {
   background-color: var(--primaryColor);
@@ -1211,3 +1209,87 @@ body {
   }
 }
 /* ********* OFFERING* ******* */
+
+/* ******** SERVICES SECTION *********** */
+.services {
+  padding-block: 5rem;
+  padding-inline: 1rem;
+}
+.services__heading {
+  text-align: center;
+}
+.services__cards {
+  padding-block: 2rem;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: repeat(auto-fill, minmax(min(265px, 100%), 1fr));
+  gap: 2rem;
+  max-width: 1170px;
+  margin-inline: auto;
+}
+.services__card {
+  border-radius: 10px;
+  border: 1px solid #eff0f0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: box-shadow 0.3s ease-in-out;
+  width: 100%;
+}
+.services__card:hover {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+.services__cardHeader {
+  background-color: #f7f7f7;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 1rem;
+  transition: background-color 0.3s ease-in-out;
+}
+.services__cardImg {
+  filter: var(--primaryFilter);
+  width: 50px;
+  height: 50px;
+  transition: background-color 0.3s ease-in-out;
+}
+.services__card:hover .services__cardHeader {
+  background-color: var(--primaryColor);
+}
+.services__card:hover .services__cardImg {
+  filter: var(--whiteFilter);
+}
+.services__cardTitle {
+  font-size: 18px;
+  margin: 0 0 10px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.services__cardDesc {
+  line-height: 1.5;
+  color: var(--lightGray);
+}
+.services__cardFoot {
+  padding: 0.5rem 0;
+}
+.services__exploreMore {
+  background-color: var(--primaryColor);
+  color: var(--light);
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  opacity: 0;
+}
+.services__card:hover .services__exploreMore {
+  opacity: 1;
+}
+.services__exploreMore:hover {
+  background-color: var(--secondaryColor);
+  color: var(--light);
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+}
