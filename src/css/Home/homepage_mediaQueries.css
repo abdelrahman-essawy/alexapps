@@ -136,7 +136,7 @@
     min-height: 540px;
   }
   .hero__background img {
-    min-height: 800px;
+    /* min-height: 800px; */
   }
   .hero__title {
     font-size: 36px;
@@ -295,7 +295,7 @@
   }
 
   /* === NAVBAR === */
-  .navbar__brangImg {
+  .navbar__brandImg {
     width: 230px;
   }
   /* === NAVBAR === */

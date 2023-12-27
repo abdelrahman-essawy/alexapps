@@ -2,7 +2,7 @@
 /* ========= Colors ========= */
 /* ========================== */
 :root {
-  --primaryColor: #ec7323;
+  --primaryColor: #c34e00; /* main primary color -> #ec7323 */
   --secondaryColor: #202122;
   --light: #fff;
   --lightDark: #343535;
@@ -1295,7 +1295,7 @@ p {
   position: relative;
 }
 .values__cards {
-  margin-top: 2rem;
+  margin-block: 2rem;
 }
 .swiper-wrapper {
   -webkit-box-sizing: border-box;
@@ -1306,8 +1306,8 @@ p {
   position: unset;
 }
 .swiper-pagination-clickable .swiper-pagination-bullet {
-  width: 15px;
-  height: 15px;
+  width: 25px;
+  height: 25px;
 }
 .swiper-pagination-clickable .swiper-pagination-bullet-active {
   background-color: var(--primaryColor);
@@ -1905,7 +1905,7 @@ p {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  background-image: url("../../assets/who_talk_about_us/featured-in-bg-pattern.png");
+  background-image: url("../../../assets/Home/who_talk_about_us/featured-in-bg-pattern.png");
   display: none;
 }
 
@@ -2604,6 +2604,7 @@ textarea.sch__formInp {
   max-width: 480px;
   margin-inline: auto;
   padding-inline: 1rem;
+  justify-content: center;
 }
 .age__imgHolder img {
   width: 100px;
@@ -2634,7 +2635,8 @@ textarea.sch__formInp {
   border-radius: 10px;
 }
 .age__experience {
-  color: var(--primaryColor);
+  /* color: var(--primaryColor); */
+  color: #ff6600;
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
@@ -2740,6 +2742,8 @@ textarea.sch__formInp {
   text-align: center;
 }
 .mark__desc {
+  /* color is not added yet */
+  color: #b1afaf;
   text-align: center;
   margin-top: 1rem;
 }
@@ -2781,10 +2785,12 @@ textarea.sch__formInp {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  border: 1px solid var(--primaryColor);
+  /* border: 1px solid var(--primaryColor); */
+  border: 1px solid #ff6600;
   padding: 0.7rem 1.75rem;
   border-radius: 5px;
-  color: var(--primaryColor);
+  /* color: var(--primaryColor); */
+  color: #ff6600;
   -webkit-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -2860,5 +2866,14 @@ textarea.sch__formInp {
 /* --- */
 .show {
   opacity: 1;
+}
+small {
+  font-size: 12px;
+  font-weight: 400;
+  color: red;
+  display: none;
+}
+.showError {
+  display: block;
 }
 /* --- */
