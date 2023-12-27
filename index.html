@@ -5104,7 +5104,7 @@
 
           <div class="sch__formContainer">
             <h3 class="sch__formTitle">Hire us on</h3>
-            <form action="" class="sch__form">
+            <form action="" class="sch__form" id="contact-form">
               <label for="name" class="sch__label sch__nameLabel">
                 <input
                   class="sch__formInp"
@@ -5113,6 +5113,9 @@
                   id="name"
                   placeholder="Name"
                 />
+                <small data-inputName="name"
+                  >The name is required and cannot be empty</small
+                >
               </label>
               <label for="email" class="sch__label sch__emailLabel">
                 <input
@@ -5122,6 +5125,9 @@
                   name="email"
                   placeholder="Email"
                 />
+                <small data-inputName="email"
+                  >The email is required and cannot be empty</small
+                >
               </label>
               <label for="contactNumber" class="sch__contactLabel">
                 <input
@@ -5131,8 +5137,12 @@
                   name="contactNumber"
                   placeholder="Contact No"
                 />
+                <small data-inputName="contactNumber"
+                  >The Contact number is required please enter a valid
+                  number</small
+                >
               </label>
-              <label for="comapnyName" class="sch__label sch__companyNameLabel">
+              <label for="companyName" class="sch__label sch__companyNameLabel">
                 <input
                   class="sch__formInp"
                   type="text"
@@ -5140,6 +5150,9 @@
                   name="companyName"
                   placeholder="Company Name"
                 />
+                <small data-inputName="companyName"
+                  >The Company name is required and cannot be empty</small
+                >
               </label>
               <label for="budget" class="sch__label sch__budgetLabel">
                 <select id="budget" class="sch__formInp" name="budget">
@@ -5148,38 +5161,41 @@
                   <option value="1000-5000">&euro;1000 - &euro;5000</option>
                   <option value="5000-10000">&euro;5000 - &euro;10000</option>
                   <option value="10000-20000">&euro;10000 - &euro;20000</option>
-                  <option value="20000">&euro;20000+</option>
+                  <option value="20000+">&euro;20000+</option>
                 </select>
+                <small data-inputName="budget">Please choose your budget</small>
               </label>
               <label for="region" class="sch__label sch__regionLabel">
                 <select class="sch__formInp" name="region" id="region">
                   <option value="Your Region">Your Region</option>
-                  <option value="Africa">Africa</option>
-                  <option value="Asia">Asia</option>
-                  <option value="South America">South America</option>
-                  <option value="North America">North America</option>
-                  <option value="Europe">Europe</option>
-                  <option value="Europe">Austrlia</option>
+                  <option value="africa">Africa</option>
+                  <option value="asia">Asia</option>
+                  <option value="south-america">South America</option>
+                  <option value="north-america">North America</option>
+                  <option value="europe">Europe</option>
+                  <option value="austrlia">Austrlia</option>
                 </select>
+                <small data-inputName="region">Please choose a region</small>
               </label>
               <label for="our-services" class="sch__label sch__servicesLabel">
                 <select class="sch__formInp" name="service" id="our-services">
                   <option value="-- Select the Service --">
                     -- Select the Service --
                   </option>
-                  <option value="Mobile App Development">
+                  <option value="mobile-app-development">
                     Mobile App Development
                   </option>
-                  <option value="AR Development">AR Development</option>
-                  <option value="VR Development">VR Development</option>
-                  <option value="Web Development">Web Development</option>
-                  <option value="Game Development">Game Development</option>
-                  <option value="Enterprise Solution">
+                  <option value="ar-development">AR Development</option>
+                  <option value="vr-development">VR Development</option>
+                  <option value="web-development">Web Development</option>
+                  <option value="game-development">Game Development</option>
+                  <option value="enterprise-solutions">
                     Enterprise Solution
                   </option>
-                  <option value="Startup MVP">Startup MVP</option>
-                  <option value="Other">Other</option>
+                  <option value="">Startup MVP</option>
+                  <option value="other">Other</option>
                 </select>
+                <small data-inputName="service">Please choose a service</small>
               </label>
               <label
                 for="where-did-you-hear-about-us"
@@ -5193,12 +5209,15 @@
                   <option value="where">Where Did You Hear About Us?</option>
                   <option value="google">Google</option>
                   <option value="clutch">Clutch</option>
-                  <option value="people per hour">People Per Hour</option>
+                  <option value="people-per-hour">People Per Hour</option>
                   <option value="goodfirms">GoodFirms</option>
-                  <option value="people ref">People References</option>
-                  <option value="social media">Social Media</option>
+                  <option value="people-reference">People References</option>
+                  <option value="social-media">Social Media</option>
                   <option value="other">Other</option>
                 </select>
+                <small data-inputName="heared-about-us"
+                  >Choose an option!</small
+                >
               </label>
               <label for="your-message" class="sch__textareaLabel sch__label">
                 <textarea
@@ -5207,6 +5226,9 @@
                   id="your-message"
                   placeholder="Message"
                 ></textarea>
+                <small data-inputName="message"
+                  >Provide us with a brief of your project!</small
+                >
               </label>
               <button type="submit" class="sch__submit">Send Message</button>
             </form>

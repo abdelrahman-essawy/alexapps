@@ -2368,3 +2368,12 @@ textarea.sch__formInp {
   opacity: 1;
 }
 /* --- */
+small {
+  font-size: 12px;
+  font-weight: 400;
+  color: red;
+  display: none;
+}
+.showError {
+  display: block;
+}
