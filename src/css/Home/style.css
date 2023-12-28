@@ -165,6 +165,31 @@ p {
 .toTopFadeIn {
   opacity: 1;
 }
+.floatingQuote {
+  position: fixed;
+  right: -50px;
+  top: 200px;
+  background: var(--primaryColor);
+  z-index: 1001;
+  font-size: 18px;
+  color: #fff!important;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 5px 5px 0 0;
+  letter-spacing: 1px;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.floatingQuote:hover {
+  background-color: var(--secondaryColor);
+  box-shadow:  5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15)
+}
 /* ========================== */
 /* ======== CUSTOMS ========= */
 /* ========================== */
