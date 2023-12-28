@@ -52,6 +52,7 @@ img {
   max-width: 100%;
   height: auto;
   vertical-align: middle;
+  object-fit: contain;
 }
 b,
 strong {
@@ -172,7 +173,7 @@ p {
   background: var(--primaryColor);
   z-index: 1001;
   font-size: 18px;
-  color: #fff!important;
+  color: #fff !important;
   font-weight: 500;
   padding: 10px 20px;
   border-radius: 5px 5px 0 0;
@@ -181,14 +182,16 @@ p {
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  -moz-transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+  -moz-transition: background-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
   -o-transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 .floatingQuote:hover {
   background-color: var(--secondaryColor);
-  box-shadow:  5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15)
+  box-shadow: 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 }
 /* ========================== */
 /* ======== CUSTOMS ========= */
@@ -841,7 +844,6 @@ p {
   width: 100%;
   height: 100%;
   z-index: 0;
-  /* z-index: -1; */
 }
 .hero__background img {
   -o-object-fit: cover;
@@ -968,6 +970,7 @@ p {
 }
 .aboutUs__img {
   border-radius: 20px;
+  object-fit: cover;
 }
 
 .aboutUs__title {
@@ -1185,6 +1188,7 @@ p {
 .offerings__cardImgHolder {
   margin-bottom: 20px;
   text-align: center;
+  object-fit: cover;
 }
 .offerings__cardHead {
   margin-bottom: 1rem;
@@ -1860,6 +1864,7 @@ p {
 }
 .testi__mainPreview img {
   border-radius: 50%;
+  object-fit: cover;
 }
 .testi__mainPreviewQuotes,
 .testi__imgQuote {
@@ -1909,8 +1914,6 @@ p {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-}
-.portf__figure {
 }
 .portf__title {
   text-align: center;
@@ -2132,7 +2135,10 @@ p {
   border-radius: 50%;
   overflow: hidden;
 }
-
+.contact__imgHolder img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
 .contact__title {
   font-size: 24px;
   margin-bottom: 20px;
@@ -2350,6 +2356,10 @@ p {
 .fresh__cardImg:hover::before,
 .fresh__cardImg:focus::before {
   opacity: 1;
+}
+.fresh__cardImg img {
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 .fresh__cardBody {
   padding: 1rem;
@@ -2671,7 +2681,10 @@ textarea.sch__formInp {
 .engage__right {
   display: none;
 }
-
+.engage__right img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
 /* Engagement Model END*/
 
 /* Location */
