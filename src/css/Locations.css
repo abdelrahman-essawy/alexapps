@@ -1,0 +1,110 @@
+/* Location */
+.loc {
+  padding: 5rem 1rem 2rem;
+  background-color: var(--light);
+}
+.loc__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 3rem;
+  width: 100%;
+  gap: 1rem;
+}
+.loc__card {
+  max-width: 370px;
+}
+
+.loc__img img {
+  border-radius: 10px;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+}
+.loc__infoListItem,
+.loc__title {
+  margin-bottom: 1rem;
+}
+.loc__title {
+  font-size: 20px;
+}
+
+.loc__infoListItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+}
+.loc__infoDesc {
+  font-size: 15px;
+  color: var(--lightGray);
+}
+.loc__number,
+.loc__email {
+  color: var(--lightGray);
+  -webkit-transition: color 0.3s ease;
+  -o-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.loc__number:hover,
+.loc__email:hover,
+.loc__number:focus,
+.loc__email:focus {
+  color: var(--primaryColor);
+}
+/* Location END*/
+
+@media (min-width: 576px) {
+  .loc__card {
+    max-width: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+  }
+  .loc__info {
+    width: 60%;
+  }
+  .loc__img {
+    width: 40%;
+  }
+  .loc__title {
+    font-size: 22px;
+  }
+}
+@media (min-width: 768px) {
+  .loc__cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .loc__card {
+    display: unset;
+  }
+  .loc__info {
+    width: 100%;
+  }
+  .loc__img {
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .loc__title {
+    font-size: 24px;
+  }
+}
