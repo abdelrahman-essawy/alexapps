@@ -1,4 +1,10 @@
 // FOR VALIDATION;
+const inputType = {
+  text: true,
+  email: true,
+  textarea: true,
+  number: true,
+};
 const selectOptions = {
   budget: ["0-1000", "1000-5000", "5000-10000", "10000-20000", "20000+"],
   region: [

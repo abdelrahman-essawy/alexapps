@@ -163,10 +163,6 @@
 
 /* ======================= */
 @media (min-width: 1200px) {
-  /* === MAIN CONTENT === */
-  main {
-    margin-bottom: 650px;
-  }
   .sectionsTitleTag {
     font-size: 34px;
   }
