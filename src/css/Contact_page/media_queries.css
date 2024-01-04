@@ -19,14 +19,14 @@
   .locations__imgs {
     flex-direction: column;
   }
-  .locations__imgHolder h4 {
+  .locations__imgHolder h3 {
     right: 20px;
     bottom: 20px;
     font-size: 22px;
   }
 }
 @media (min-width: 1200px) {
-  .locations__imgHolder h4 {
+  .locations__imgHolder h3 {
     font-size: 24px;
     bottom: 30px;
     right: 50px;
