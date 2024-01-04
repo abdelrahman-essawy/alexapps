@@ -208,6 +208,12 @@ p {
 .swiper-pagination-clickable .swiper-pagination-bullet-active {
   background-color: var(--primaryColor);
 }
+@media (min-width: 1200px) {
+  /* === MAIN CONTENT === */
+  main {
+    margin-bottom: 650px;
+  }
+}
 /* ========================== */
 /* ======== CUSTOMS ========= */
 /* ========================== */
