@@ -1,3 +1,36 @@
+const attachButton = document.getElementById("attachButton");
+const fileInput = document.querySelector("input[type=file]");
+const subfile = document.getElementById("subfile");
+const allowedTypes = ["jpeg", "png", "doc", "pdf"];
+const allowedSize = 1024 * 10 ** 3;
+const attachErrMsg = document.getElementById("attachErrorMsg");
+
+const isEmpty = (field) => {
+  return !(field.value.trim().length > 0);
+};
+const isEmailValid = (value) => {
+  const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+  return regex.test(value);
+};
+const isSelectValid = (select) => {
+  const { name, value } = select;
+  return selectOptions[name].includes(value);
+};
+
+const toggleErrors = (check, errorHolder) => {
+  if (check) {
+    errorHolder.classList.remove("showError");
+  } else {
+    errorHolder.classList.add("showError");
+  }
+};
+
+const isAttachValid = () => {
+  const { type, size } = fileInput?.files[0] || { type: "", size: 0 };
+  const isTypeValid = allowedTypes.includes(type.split("/")[1]);
+  const isSizeValid = size / 10 ** 6 / allowedSize < 1;
+  return isTypeValid && isSizeValid;
+};
 // FOR VALIDATION;
 const inputType = {
   text: true,
@@ -59,6 +92,7 @@ const validateInputs = (inputField) => {
     "contactNumber",
     "companyName",
     "message",
+    "attach",
   ];
   const ourSelects = ["budget", "region", "service", "heared-about-us"];
   const { name, value, type } = inputField;
@@ -68,6 +102,9 @@ const validateInputs = (inputField) => {
     const isValueValid = selectOptions[name].includes(value);
 
     return isNameValid && isValueValid;
+  }
+  if (type === "file") {
+    return isAttachValid();
   }
 
   const isNameValid = fieldNames.includes(name);
@@ -89,6 +126,7 @@ theForm.addEventListener("submit", (e) => {
   const errorsList = {};
 
   allFields.forEach((field) => {
+    if (field.name === "placeholder") return;
     const passed = validateInputs(field);
     if (!passed) {
       errorsList[field.name] = true;
@@ -98,6 +136,7 @@ theForm.addEventListener("submit", (e) => {
   const errorNodes = theForm.querySelectorAll("small");
 
   if (!Object.keys(errorsList).length) {
+    console.log("Form Submited");
     theForm.submit();
   }
   Object.keys(errorsList).forEach((error) => {
@@ -105,7 +144,7 @@ theForm.addEventListener("submit", (e) => {
       .find((node) => {
         return node?.dataset?.inputname === error;
       })
-      .classList.add("showError");
+      ?.classList.add("showError");
   });
 });
 
@@ -144,22 +183,31 @@ formSelects.forEach((select) => {
 textarea.addEventListener("keyup", () => {
   toggleErrors(!isEmpty(textarea), textarea.nextElementSibling);
 });
-const isEmpty = (field) => {
-  return !(field.value.trim().length > 0);
-};
-const isEmailValid = (value) => {
-  const regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
-  return regex.test(value);
-};
-const isSelectValid = (select) => {
-  const { name, value } = select;
-  return selectOptions[name].includes(value);
-};
 
-const toggleErrors = (check, errorHolder) => {
-  if (check) {
-    errorHolder.classList.remove("showError");
-  } else {
-    errorHolder.classList.add("showError");
-  }
-};
+attachButton.addEventListener("click", () => {
+  fileInput.click();
+});
+fileInput.addEventListener("change", () => {
+  subfile.placeholder = fileInput.value;
+  toggleErrors(isAttachValid(), attachErrMsg);
+});
+
+const locationTabs = document.querySelectorAll(".location-tab");
+const mapsContainer = document.querySelector(".locations__maps");
+locationTabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const location = tab.dataset.location;
+    const currentActiveMap = mapsContainer.querySelector(
+      ".locations__map-active"
+    );
+    const reqMap = mapsContainer.querySelector(`.${location}`);
+
+    currentActiveMap.classList.remove("locations__map-active");
+    reqMap.classList.add("locations__map-active");
+  });
+});
+
+const scheduleAMeeting = document.getElementById("schedule-a-meeting");
+scheduleAMeeting.addEventListener("click", () => {
+  callModal?.classList.add("showModal");
+});

@@ -19,6 +19,7 @@
     />
     <link rel="stylesheet" href="./src/css/General.css" />
     <link rel="stylesheet" href="./src/css/Navbar.css" />
+    <link rel="stylesheet" href="./src/css/callModal.css" />
     <link rel="stylesheet" href="./src/css/Hero.css" />
     <link rel="stylesheet" href="./src/css/Brands.css" />
     <link rel="stylesheet" href="./src/css/Values.css" />
@@ -110,7 +111,7 @@
               >
               or Speak to our expert <span>+44 203 467 7471</span> or
             </p>
-            <a href="#" class="topNav__avatar">
+            <a href="#" class="topNav__avatar disabledLink">
               <img
                 loading="lazy"
                 src="./assets/Navbar/top_nav/call-us-avatar.jpg"
@@ -153,7 +154,7 @@
           <!-- Brand Logo -->
 
           <!-- Call-us  to-1024px-->
-          <div class="navbar__callUs">
+          <a href="#" class="navbar__callUs disabledLink">
             <!-- <i class="fas fa-phone-volume icon navbar__phoneIcon"></i> -->
             <img
               loading="lazy"
@@ -164,7 +165,7 @@
               height="25"
             />
             <span class="navbar__calRequest"> Request a Call Back</span>
-          </div>
+          </a>
           <!-- Call-us -->
 
           <!-- Links List from-1025px-->
@@ -172,7 +173,7 @@
             <ul class="navbar__menu">
               <li class="link navbar__listItem">
                 <a
-                  href="./index.html"
+                  href="/index.html"
                   class="navbar__navLinkTag navbar__navLinkTag-activeLink"
                   >Home</a
                 >
@@ -202,7 +203,7 @@
                       height="20"
                     />
                     <a
-                      href="./About-us/index.html"
+                      href="/About-us/index.html"
                       class="navbar__subNavLinkTag"
                       >Who we are</a
                     >
@@ -977,7 +978,7 @@
               </li>
 
               <li class="link navbar__listItem">
-                <a href="./Portfolio/index.html" class="navbar__navLinkTag">Portfolio</a>
+                <a href="/Portfolio/index.html" class="navbar__navLinkTag">Portfolio</a>
               </li>
 
               <li class="link navbar__listItem">
@@ -985,7 +986,7 @@
               </li>
 
               <li class="link navbar__listItem">
-                <a href="#" class="navbar__navLinkTag">Contact</a>
+                <a href="/Contact/index.html" class="navbar__navLinkTag">Contact</a>
               </li>
             </ul>
             <a href="#" class="navbar__estimation">estimate your project</a>
@@ -1000,7 +1001,7 @@
       <div class="mobileNav__slide mobileNav__mainSlide">
         <ul class="mobileNav__menu mobileNav__mainMenu">
           <li class="mobileNav__menuListItem">
-            <a href="./index.html" class="mobileNav__menuNavLinkTag">
+            <a href="/index.html" class="mobileNav__menuNavLinkTag">
               <img
                 loading="lazy"
                 class="mobileNav__Icon"
@@ -1089,7 +1090,7 @@
             </a>
           </li>
           <li class="mobileNav__menuListItem">
-            <a href="./Portfolio/index.html" class="mobileNav__menuNavLinkTag">
+            <a href="/Portfolio/index.html" class="mobileNav__menuNavLinkTag">
               <img
                 loading="lazy"
                 class="mobileNav__Icon"
@@ -1115,7 +1116,7 @@
             </a>
           </li>
           <li class="mobileNav__menuListItem">
-            <a href="#" class="mobileNav__menuNavLinkTag">
+            <a href="/Contact/index.html" class="mobileNav__menuNavLinkTag">
               <img
                 loading="lazy"
                 class="mobileNav__Icon"
@@ -1151,7 +1152,7 @@
             </a>
           </li>
           <li class="mobileNav__menuListItem">
-            <a href="./About-us/index.html" class="mobileNav__menuNavLinkTag">
+            <a href="/About-us/index.html" class="mobileNav__menuNavLinkTag">
               <span>Who We are</span>
             </a>
           </li>
@@ -1816,6 +1817,122 @@
     <a href="#" class="floatingQuote">Get Quote</a>
     <!-- -------------------------------------------------------------------------------------- -->
 
+    <div class="callModal">
+      <div class="modal__backdrop"></div>
+      <div class="modal__formContainer">
+        <div class="modal__form">
+          <div class="modal__formHead">
+            <button type="button" class="modal__close callModalClose">
+              <img
+                src="../assets/General/close.svg"
+                alt="close"
+                width="25"
+                height="25"
+              />
+            </button>
+            <div class="modal__avatar">
+              <div class="modal__avatarImg">
+                <img
+                  src="../assets/General/oliver.webp"
+                  alt="oliver"
+                  width="120"
+                  height="120"
+                />
+              </div>
+              <div class="modal__avatarDesc">
+                <strong>Request a Call Back</strong>
+                <p>
+                  Enter your contact details and one of our friendly team member
+                  will be in touch soon!.
+                </p>
+              </div>
+            </div>
+          </div>
+          <form class="modal__formBody" id="modalForm">
+            <label class="modal-label" for="modal-fullName">
+              <input
+                placeholder="Full Name"
+                type="text"
+                id="modal-fullName"
+                name="modal-fullName"
+              />
+              <small data-inputName="modal-fullName"
+                >Name is required & can't be empty!</small
+              >
+            </label>
+            <label class="modal-label" for="modal-email">
+              <input
+                placeholder="Email"
+                type="email"
+                id="modal-email"
+                name="modal-email"
+              />
+              <small data-inputName="modal-email">Email is required</small>
+            </label>
+            <label class="modal-label" for="modal-contact">
+              <input
+                placeholder="Contact Number"
+                type="number"
+                id="modal-contact"
+                name="modal-contact"
+              />
+              <small data-inputName="modal-contact"
+                >Contact number is required</small
+              >
+            </label>
+            <label class="modal-label" for="modal-services" class="">
+              <select
+                aria-label="services"
+                class=""
+                name="modal-services"
+                id="modal-services"
+              >
+                <option value="-- Select the Service --">
+                  -- Select the Service --
+                </option>
+                <option value="mobile-app-development">
+                  Mobile App Development
+                </option>
+                <option value="ar-development">AR Development</option>
+                <option value="vr-development">VR Development</option>
+                <option value="web-development">Web Development</option>
+                <option value="game-development">Game Development</option>
+                <option value="enterprise-solutions">
+                  Enterprise Solution
+                </option>
+                <option value="">Startup MVP</option>
+                <option value="other">Other</option>
+              </select>
+              <small data-inputName="modal-services"
+                >Please choose a service</small
+              >
+            </label>
+            <label class="modal-label" for="modal-region" class="">
+              <select
+                aria-label="region"
+                class=""
+                name="modal-region"
+                id="modal-region"
+              >
+                <option value="Your Region">Your Region</option>
+                <option value="africa">Africa</option>
+                <option value="asia">Asia</option>
+                <option value="south-america">South America</option>
+                <option value="north-america">North America</option>
+                <option value="europe">Europe</option>
+                <option value="austrlia">Austrlia</option>
+              </select>
+              <small data-inputName="modal-region"
+                >Please choose a region</small
+              >
+            </label>
+            <label for="modal-submit" class="modal-label">
+              <button id="modal-submit">Request a Call Back</button>
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
     <main>
       <!-- Hero Section -->
       <section class="hero" id="heroSection">
@@ -1829,16 +1946,16 @@
             />
           </div>
           <div class="hero__content">
-            <div class="text hero__text">
-              <h1 class="title hero__title">
+            <div class="hero__text">
+              <h1 class="hero__title">
                 Bespoke Mobile App Development Company
               </h1>
-              <p class="description hero__description">
+              <p class="hero__description">
                 Perfectly crafted, creative and innovative Augmented Reality,
                 Virtual Reality, Android and iPhone App Development Solutions.
               </p>
             </div>
-            <div class="heroNavigation hero__navigation">
+            <div class="hero__navigation">
               <a href="#" class="hero__link">explore more</a>
               <a href="#" class="hero__link">get in touch</a>
             </div>
@@ -5713,7 +5830,7 @@
                 />
               </li>
             </ul>
-            <a href="#" class="mark__getInTouch">Get in Touch Now</a>
+            <a href="/Contact/index.html" class="mark__getInTouch">Get in Touch Now</a>
           </div>
         </div>
         <div class="rights">
@@ -5723,7 +5840,7 @@
           <div>
             <ul class="rights__list">
               <li class="rights__listItem">
-                <a href="#" class="rights__link">Contact Us</a>
+                <a href="/Contact/index.html" class="rights__link">Contact Us</a>
               </li>
               <li class="rights__listItem">
                 <a href="#" class="rights__link">Privacy Policy</a>
@@ -5746,6 +5863,7 @@
     </a>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./src/js/Navbar.js"></script>
+    <script src="./src/js/callModal.js"></script>
     <script src="./src/js/FormValidation.js"></script>
     <script src="./src/js/typewriterEffect.js"></script>
     <script src="./src/js/swipers/Values.js"></script>
