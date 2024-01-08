@@ -26,6 +26,7 @@ const mutationFunction = (animatedElements) => {
           target.dataset.mutationType
         );
         target.removeAttribute("data-mutation-type");
+        target.removeAttribute("data-mutation");
         scrollMutationObserver.unobserve(target);
       }, 500);
     }
@@ -37,4 +38,8 @@ const scrollMutationObserver = new IntersectionObserver(
   scrollMutationConfig
 );
 
-animatedElements.forEach((Element) => scrollMutationObserver.observe(Element));
+window.addEventListener("DOMContentLoaded", () => {
+  animatedElements.forEach((Element) =>
+    scrollMutationObserver.observe(Element)
+  );
+});
