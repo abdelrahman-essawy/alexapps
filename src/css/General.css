@@ -37,6 +37,7 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 *:focus {
   outline-color: var(--primaryColor);
@@ -70,6 +71,24 @@ p {
 /* ========================== */
 /* ========= CUSTOM ========= */
 /* ========================== */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-image: url("/assets/General/chevron-down-svgrepo-com.svg");
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 0.5rem) center;
+  cursor: pointer;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
 .container-1170px {
   width: 100%;
   max-width: 1170px;
@@ -107,7 +126,7 @@ p {
   font-size: 26px;
   padding: 12px 9px;
   position: fixed;
-  left: 20px;
+  right: 20px;
   height: 52px;
   text-align: center;
   width: 52px;

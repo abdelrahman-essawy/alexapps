@@ -50,7 +50,6 @@
   /* === ABOUT-US SECTION  === */
   .aboutUs__statsList {
     grid-template-columns: repeat(4, 1fr);
-    padding-left: 15%;
   }
   .aboutUs__statsIcon {
     -ms-flex-item-align: center;
@@ -114,6 +113,9 @@
     -o-object-fit: cover;
     object-fit: cover;
     border: 5px solid var(--light);
+  }
+  .aboutUs__statsList {
+    padding-left: 15%;
   }
   /* === ABOUT-US SECTION === */
 
