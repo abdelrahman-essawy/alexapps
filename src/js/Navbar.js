@@ -80,3 +80,12 @@ window.addEventListener("resize", () => {
   burgerMenu.classList.remove("activeMenu");
   mobileMenu.classList.remove("slideIn");
 });
+
+// TOGGLE MODAL FROM TOP NAV
+const topNavCallBack = document.querySelector(".topNav__avatar");
+const navbarCallBackMobile = document.querySelector(".navbar__callUs");
+const showModalFn = () => {
+  callModal?.classList.add("showModal");
+};
+topNavCallBack.addEventListener("click",showModalFn);
+navbarCallBackMobile.addEventListener("click",showModalFn);

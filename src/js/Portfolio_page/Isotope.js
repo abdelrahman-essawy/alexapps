@@ -8,7 +8,17 @@ filtersElem.addEventListener("click", function (event) {
   if (!matchesSelector(event.target, "button")) {
     return;
   }
-    const filterValue = event.target.getAttribute("data-filter");
-    // use matching filter function
-    iso.arrange({ filter: filterValue });
+  const filterValue = event.target.getAttribute("data-filter");
+  // use matching filter function
+  iso.arrange({ filter: filterValue });
+});
+
+const options = document.querySelectorAll(".pp__option button");
+options.forEach((option) => {
+  option.addEventListener("click", () => {
+    document
+      .querySelector(".pp__option button.active")
+      .classList.remove("active");
+    option.classList.add("active");
+  });
 });

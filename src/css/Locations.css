@@ -23,14 +23,24 @@
 }
 .loc__card {
   max-width: 370px;
+  border: 1px solid var(--mediumGray);
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+  -ms-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+  -o-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
 }
 
 .loc__img img {
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   margin-bottom: 1.5rem;
+  width: 100%;
+}
+.loc__info {
+  padding-inline: 0.5rem;
 }
 .loc__infoListItem,
 .loc__title {
@@ -82,6 +92,9 @@
   .loc__img {
     width: 40%;
   }
+  .loc__img img{
+    border-radius: 10px 0 0 10px;
+  }
   .loc__title {
     font-size: 22px;
   }
@@ -101,6 +114,9 @@
   }
   .loc__img {
     width: 100%;
+  }
+  .loc__img img{
+    border-radius: 10px 10px 0 0;
   }
 }
 @media (min-width: 992px) {

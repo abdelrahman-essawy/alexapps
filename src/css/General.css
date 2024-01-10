@@ -37,6 +37,7 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 *:focus {
   outline-color: var(--primaryColor);
@@ -59,9 +60,30 @@ strong {
   font-weight: bolder;
 }
 p {
-  font-size: 14px;
+  font: normal 14px/22px Montserrat,sans-serif;
   line-height: 1.5;
   color: var(--lightGray);
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-image: url("/assets/General/chevron-down-svgrepo-com.svg");
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 0.5rem) center;
+  cursor: pointer;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+textarea {
+  resize: none;
 }
 /* ========================== */
 /* ========= RESETS ========= */
@@ -94,6 +116,21 @@ p {
   font-size: 20px;
   margin-bottom: 1rem;
 }
+@media (min-width: 768) {
+  .sectionsTitleTag {
+    font-size: 26px;
+  }
+}
+@media (min-width: 992px) {
+  .sectionsTitleTag {
+    font-size: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .sectionsTitleTag {
+    font-size: 34px;
+  }
+}
 .sectionDescription {
   color: var(--lightGray);
   max-width: 880px;
@@ -107,7 +144,7 @@ p {
   font-size: 26px;
   padding: 12px 9px;
   position: fixed;
-  left: 20px;
+  right: 20px;
   height: 52px;
   text-align: center;
   width: 52px;

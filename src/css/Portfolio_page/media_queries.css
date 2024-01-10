@@ -3,9 +3,6 @@
   .hero__breadcrumbItem {
     font-size: 14px;
   }
-  .values__getInTouch p {
-    font-size: 24px;
-  }
   .portfolio-preview-thumb-sep,
   .portfolio-preview-thumb-sep-opt2 {
     display: block;
@@ -17,15 +14,6 @@
 @media (min-width: 992px) {
   .hero__title {
     font-size: 32px;
-  }
-  .values__getInTouch {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
   }
   .pp__sectionContainer {
     flex-direction: row;
