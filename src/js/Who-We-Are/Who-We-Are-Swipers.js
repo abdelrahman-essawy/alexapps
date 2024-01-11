@@ -19,7 +19,7 @@ const historyTimeline = new Swiper(".hist__timeline-swiper", {
     },
   },
 });
-
+const histConfig = { attributes: true };
 const timelineSlides = document.querySelectorAll(".hist__timelineSlide span");
 const timelineSlidePag = document.querySelectorAll(
   ".hist__timeline .swiper-pagination span"
@@ -42,7 +42,7 @@ const histMadeObserver = new MutationObserver(() => {
   ).dataset.swiperSlideIndex;
   timelineSlidePag[currentSlideIndex].click();
 });
-histMadeObserver.observe(histMadeTargetNode, config);
+histMadeObserver.observe(histMadeTargetNode, histConfig);
 
 const timelineObserver = new MutationObserver(() => {
   const currentSlideIndex = timelineTargetNode.querySelector(
@@ -50,7 +50,7 @@ const timelineObserver = new MutationObserver(() => {
   ).dataset.swiperSlideIndex;
   histMadeSlidePag[+currentSlideIndex].click();
 });
-timelineObserver.observe(timelineTargetNode, config);
+timelineObserver.observe(timelineTargetNode, histConfig);
 
 timelineSlides.forEach((slide) => {
   slide.addEventListener("click", (e) => {
