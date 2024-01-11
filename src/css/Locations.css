@@ -36,13 +36,12 @@
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  margin-bottom: 1.5rem;
   width: 100%;
 }
 .loc__info {
-  padding-inline: 0.5rem;
+  padding: 1rem;
 }
-.loc__infoListItem,
+.loc__infoListItem:not(:nth-of-type(3)),
 .loc__title {
   margin-bottom: 1rem;
 }
@@ -55,9 +54,9 @@
   display: -ms-flexbox;
   display: flex;
   gap: 1rem;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .loc__infoDesc {
   font-size: 15px;
@@ -84,7 +83,6 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 1rem;
   }
   .loc__info {
     width: 60%;
@@ -92,7 +90,7 @@
   .loc__img {
     width: 40%;
   }
-  .loc__img img{
+  .loc__img img {
     border-radius: 10px 0 0 10px;
   }
   .loc__title {
@@ -115,7 +113,7 @@
   .loc__img {
     width: 100%;
   }
-  .loc__img img{
+  .loc__img img {
     border-radius: 10px 10px 0 0;
   }
 }
