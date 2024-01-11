@@ -59,7 +59,7 @@
   align-items: center;
 }
 .loc__infoDesc {
-  font-size: 15px;
+  font-size: 13px;
   color: var(--lightGray);
 }
 .loc__number,
@@ -68,6 +68,10 @@
   -webkit-transition: color 0.3s ease;
   -o-transition: color 0.3s ease;
   transition: color 0.3s ease;
+}
+.loc__number a,
+.loc__email a {
+  font-size: 13px;
 }
 .loc__number:hover,
 .loc__email:hover,
