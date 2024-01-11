@@ -102,7 +102,9 @@ theForm.addEventListener("submit", (e) => {
   }
   Object.keys(errorsList).forEach((error) => {
     Array.from(errorNodes)
-      .find((node) => node.dataset.inputname === error)
+      .find((node) => {
+        return node?.dataset?.inputname === error;
+      })
       .classList.add("showError");
   });
 });

@@ -328,7 +328,6 @@
   -webkit-filter: var(--primaryFilter);
   filter: var(--primaryFilter);
 }
-
 /* Services Sub Menu */
 .navbar__serviceMenuContainer,
 .navbar__solutionMenuContainer {
@@ -400,6 +399,12 @@
   -ms-flex-align: center;
   align-items: center;
   gap: 1rem;
+}
+.navbar__subMenuColumnNavLinkTag-active {
+  color: var(--primaryColor);
+}
+.navbar__subMenuColumnNavLinkTag-active .navbar__subMenuColumnIconLvl2 {
+  filter: var(--primaryFilter);
 }
 .navbar__subMenuColumnIconLvl2 {
   width: 30px;

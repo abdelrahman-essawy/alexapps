@@ -93,7 +93,6 @@
 }
 .pp__option {
   width: 20%;
-  border-right: 1px solid #dddfe1;
 }
 .pp__option button {
   display: flex;
@@ -107,10 +106,23 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+  border-right: 1px solid #dddfe1;
+  -webkit-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+  -moz-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+  -o-transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out;
 }
 .pp__option button > * {
   pointer-events: none;
   user-select: none;
+}
+.pp__option button.active {
+  background-color: var(--primaryColor);
+  color: var(--light);
+  border-color: var(--primaryColor);
+}
+.pp__option button.active img {
+  filter: var(--whiteFilter);
 }
 .pp__section {
   background-position: center center;
@@ -341,87 +353,11 @@
 .pp__Squishy::before {
   background-color: rgba(0, 84, 144, 0.97);
 }
-.writerEffect {
-  padding: 3rem;
-}
-.values__getInTouch {
-  background-color: var(--light);
-  padding: 25px;
-  border: 1px solid #ecedee;
-  border-radius: 10px;
-  -webkit-box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.15);
-  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.15);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.values__getInTouch p {
-  font-size: 18px;
-  color: var(--secondaryColor);
-  font-weight: 600;
-  text-align: center;
-}
-.typeMachine {
-  color: var(--primaryColor);
-  margin-inline: 0.25rem;
-}
-.values__getInTouch a {
-  background-color: var(--primaryColor);
-  color: var(--light);
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  -webkit-transition: background-color 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out;
-  -moz-transition: background-color 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out;
-  -o-transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-.values__getInTouch a:hover,
-.values__getInTouch a:focus {
-  background-color: var(--secondaryColor);
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-}
-.blinkingCursor {
-  margin-right: 0.25rem;
-  -webkit-animation: blink 500ms linear 0s infinite alternate both;
-  animation: blink 500ms linear 0s infinite alternate both;
-}
-@-webkit-keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+.getInTouch {
+  position: unset;
+  transform: unset;
 }
 /* VALUES SECTION  END*/
-
-.writerEffect {
-  background-color: var(--light);
-}
 .grid {
   background-color: rgba(32, 33, 34, 1);
   overflow: hidden;
