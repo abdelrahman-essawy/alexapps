@@ -20,7 +20,6 @@
 .fresh__cardImg {
   display: block;
   position: relative;
-  background-color: ;
 }
 .fresh__cardImg::before {
   content: "";
