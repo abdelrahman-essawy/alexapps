@@ -60,7 +60,7 @@ strong {
   font-weight: bolder;
 }
 p {
-  font: normal 14px/22px Montserrat,sans-serif;
+  font: normal 14px/22px Montserrat, sans-serif;
   line-height: 1.5;
   color: var(--lightGray);
 }
@@ -92,6 +92,11 @@ textarea {
 /* ========================== */
 /* ========= CUSTOM ========= */
 /* ========================== */
+.container-930px {
+  width: 100%;
+  max-width: 930px;
+  margin-inline: auto;
+}
 .container-1170px {
   width: 100%;
   max-width: 1170px;
