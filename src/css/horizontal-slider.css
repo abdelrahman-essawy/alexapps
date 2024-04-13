@@ -70,3 +70,51 @@
   width: 20px;
   background-color: #393a3a;
 }
+@media (max-width: 1500px) {
+  .horizontal-slide {
+    width: 420px;
+    border-radius: 20px 20px 15px 15px;
+  }
+  .horizontal-preview {
+    border-radius: 20px;
+  }
+  .horizontal-text {
+    padding: 20px;
+  }
+  .horizontal-text h3 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 1366px) {
+  .horizontal-slide {
+    width: 400px;
+  }
+  .horizontal-text h3 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1199px) {
+  .horizontal-slide {
+    width: 400px;
+    border-radius: 25px 25px 20px 20px;
+  }
+}
+@media (max-width: 991px) {
+  .horizontal-slide {
+    width: 360px;
+  }
+  .horizontal-preview {
+    border-radius: 25px;
+  }
+  .horizontal-text {
+    padding: 20px 15px;
+  }
+}
+@media (max-width: 767px) {
+  .horizontal-slide {
+    width: 320px;
+  }
+  .horizontal-text h3 {
+    font-size: 20px;
+  }
+}
