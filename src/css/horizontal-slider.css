@@ -16,7 +16,7 @@
   background-color: var(--light);
   display: flex;
   flex-wrap: nowrap;
-  gap: 5rem;
+  column-gap: 40px;
 }
 .horizontal-slider:hover .horizontal-track {
   animation-play-state: paused;
