@@ -101,7 +101,6 @@ callModalForm.addEventListener("submit", (e) => {
   const errorNodes = callModalForm.querySelectorAll("small");
 
   if (!Object.keys(errorsList).length) {
-    console.log("Form Submited");
     callModalForm.submit();
   }
   Object.keys(errorsList).forEach((error) => {

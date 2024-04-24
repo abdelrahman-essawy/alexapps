@@ -46,3 +46,27 @@ techOptions.addEventListener("click", (e) => {
     requiredList.classList.add("show");
   }, 100);
 });
+
+const rightArrow = document.querySelector(".menu_right_arrow");
+const leftArrow = document.querySelector(".menu_left_arrow");
+const typesList = document.querySelector(".offerings__optionsMenu");
+
+rightArrow.addEventListener("click", () => {
+  typesList.scrollBy(typesList.clientWidth, 0);
+});
+leftArrow.addEventListener("click", () => {
+  typesList.scrollBy(-typesList.clientWidth, 0);
+});
+
+const allBtns = document.querySelectorAll(".posts_type_btn");
+
+allBtns.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    const currentActiveBtn = document.querySelector(
+      ".posts_type_btn.activeType"
+    );
+
+    currentActiveBtn.classList.remove("activeType");
+    btn.classList.add("activeType");
+  });
+});

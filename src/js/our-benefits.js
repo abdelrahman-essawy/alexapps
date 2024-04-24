@@ -1,8 +1,6 @@
 const animateOurBenefitsItems = document.querySelectorAll(
   ".ourBenefits__grid--item"
 );
-console.log(document.querySelectorAll(".ourBenefits"));
-console.log("hello");
 const ourBenefitsItemsConfig = {
   root: null,
   rootMargin: `0px 0px 0px 0px`,

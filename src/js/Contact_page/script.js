@@ -136,7 +136,6 @@ theForm.addEventListener("submit", (e) => {
   const errorNodes = theForm.querySelectorAll("small");
 
   if (!Object.keys(errorsList).length) {
-    console.log("Form Submited");
     theForm.submit();
   }
   Object.keys(errorsList).forEach((error) => {

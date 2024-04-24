@@ -28,7 +28,12 @@ const isEmptyAR = (field) => {
   return !(field.value.trim().length > 0);
 };
 const validateInputsAR = (inputField) => {
-  const fieldNames = ["ECOMM-userName", "ECOMM-email", "ECOMM-contact", "ECOMM-message"];
+  const fieldNames = [
+    "ECOMM-userName",
+    "ECOMM-email",
+    "ECOMM-contact",
+    "ECOMM-message",
+  ];
   const { name, value } = inputField;
 
   const isNameValid = fieldNames.includes(name);
@@ -55,8 +60,6 @@ ARForm.addEventListener("submit", (e) => {
     }
   });
   const errorNodes = ARForm.querySelectorAll("small");
-  console.log(errorNodes);
-
   if (!Object.keys(errorsList).length) {
     ARForm.submit();
   }

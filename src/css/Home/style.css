@@ -151,9 +151,41 @@
 .offerings__content {
   text-align: center;
 }
-.offerings__optionsMenu {
+.offerings__menu {
   background-color: var(--light);
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  position: relative;
+  overflow: hidden;
+  padding: 0rem 4rem;
   border-radius: 100px;
+  margin-top: 2rem;
+  margin-bottom: 60px;
+}
+.offerings__menu--arrows {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 100%;
+  padding-inline: 1rem;
+}
+.offerings__menu--arrows button {
+  background-color: transparent;
+  height: 100%;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+.sch {
+  background-color: #fafafa;
+}
+
+.offerings__optionsMenu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -163,10 +195,12 @@
   -webkit-box-pack: space-evenly;
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
-  margin-top: 2rem;
-  margin-bottom: 60px;
-  -webkit-box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  position: relative;
+  z-index: 1;
+  gap: 1rem;
 }
 .offerings__optionsListItem {
   display: flex;
@@ -215,11 +249,8 @@
   font-weight: 500;
   pointer-events: none;
   width: 100%;
+  white-space: nowrap;
 }
-.offerings__optionsListItem button span span {
-  display: none;
-}
-
 .offerings__optionsListItem:hover button,
 .offerings__optionsListItem:focus-within button {
   color: var(--primaryColor);

@@ -55,8 +55,6 @@ ARForm.addEventListener("submit", (e) => {
     }
   });
   const errorNodes = ARForm.querySelectorAll("small");
-  console.log(errorNodes);
-
   if (!Object.keys(errorsList).length) {
     ARForm.submit();
   }
